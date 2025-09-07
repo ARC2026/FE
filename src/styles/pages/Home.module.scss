@@ -1,0 +1,83 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include flex(column, center, center);
+  padding: vh(40px) vw(77px) vh(81px) vw(77px);
+  position: relative;
+  .content {
+    width: 100%;
+    max-width: 1440px;
+    @include flex(column, center, center);
+    .firstLine {
+      @include flex(row, center, center);
+      width: 100%;
+      justify-content: flex-start;
+      .bracketsLeft {
+        margin-right: vw(227px);
+      }
+      .bracketsRight {
+        margin-right: vw(12px);
+      }
+      .text {
+        font-size: rem(160px);
+        letter-spacing: -0.06em;
+      }
+    }
+    .secondLine {
+      @include flex(row, center, center);
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: vh(-77px);
+      .text {
+        font-size: rem(160px);
+        letter-spacing: -0.06em;
+      }
+    }
+    .thirdLine {
+      @include flex(row, center, center);
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: vh(-77px);
+      .text {
+        font-size: rem(160px);
+        letter-spacing: -0.06em;
+      }
+    }
+    .fourthLine {
+      @include flex(row, flex-start, center);
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: vh(-24px);
+      .date {
+        width: vw(663px);
+        height: vh(113px);
+        margin: 0 vw(24px) vh(11px) vw(24px);
+      }
+      .star {
+        margin-left: vw(17px);
+      }
+    }
+    .bottomContent {
+      @include flex(row, flex-end, space-between);
+      width: 100%;
+      margin-top: vh(135px);
+      padding-right: vw(13px);
+      .addressContainer {
+        :first-child {
+          margin-bottom: vh(-17px);
+        }
+        .address {
+          font-family: "Questrial", sans-serif;
+          font-size: rem(40px);
+          letter-spacing: -0.06em;
+        }
+      }
+    }
+  }
+}

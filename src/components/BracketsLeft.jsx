@@ -1,0 +1,19 @@
+import React from "react";
+
+const BracketsLeft = ({ color = "#ff3435", ...props }) => (
+  <svg
+    width="36"
+    height="120"
+    viewBox="0 0 36 120"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M35.3701 0L31.6104 7.0332C26.4344 16.7034 22.84 26.8346 20.8271 37.4258C19.5126 44.3749 18.8555 51.9522 18.8555 60.1572C18.8555 72.967 20.6838 84.7512 24.3398 95.5098C26.476 101.873 30.2552 110.037 35.6777 120H0.677734V0H35.3701Z"
+      fill={color}
+    />
+  </svg>
+);
+
+export default BracketsLeft;
