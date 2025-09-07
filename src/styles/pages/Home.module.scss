@@ -91,5 +91,6 @@
     width: 100%;
     height: 100%;
     @include flex(row, center, center);
+    mix-blend-mode: difference;
   }
 }
