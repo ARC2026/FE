@@ -9,6 +9,7 @@
   width: 260px;
   height: 191px;
   padding: vh(4px) vw(15px) vh(3px) 0;
+  z-index: 1;
 
   .aboutContainer {
     @include flex(row, center, center);
