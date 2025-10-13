@@ -24,3 +24,11 @@
 @function vh($size) {
   @return calc($size / 1024px * 100vh);
 }
+
+// 컬러 변수
+$color1: #ff3435;
+$color2: #b6da03;
+$color3: #229bd2;
+$black: #1c1f1c;
+$BG_1: #ff5050;
+$BG_2: #f6f6f6;
