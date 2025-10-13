@@ -1,4 +1,5 @@
 import { home } from "../assets";
+import SmallMenu from "../components/SmallMenu";
 import styles from "../styles/pages/About.module.scss";
 import BracketsLeft from "../components/BracketsLeft";
 import BracketsRight from "../components/BracketsRight";
@@ -13,6 +14,9 @@ export default function About() {
       <div className={styles.homeButton} onClick={() => navigate("/")}>
         <img src={home} alt="home" />
         <div className={styles.homeButtonText}>HOME</div>
+      </div>
+      <div className={styles.menuContainer}>
+        <SmallMenu />
       </div>
       <div className={styles.title}>ABOUT</div>
       <div className={styles.contentContainer}>
