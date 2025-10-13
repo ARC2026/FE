@@ -1,13 +1,15 @@
 @use "../_variables.scss" as *;
 
 .container {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   background-image: url("../../assets/background.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: vh(65px) 0 vh(35px) vw(83px);
+  overflow-x: hidden; // 수평 스크롤 숨김
   .homeButton {
     @include flex(row, center, flex-start, vw(7px));
     .homeButtonText {
