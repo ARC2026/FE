@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Busan";
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff")
+      format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Busan", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
