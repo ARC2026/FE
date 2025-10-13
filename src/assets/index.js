@@ -6,7 +6,7 @@ import menuBackground from "./menu_background.svg";
 import home from "./home.svg";
 import parenthesisLeft from "./parenthesis_left.svg";
 import parenthesisRight from "./parenthesis_right.svg";
-
+import profile from "./profile.svg";
 export {
   background,
   bracketsLeft,
@@ -16,4 +16,5 @@ export {
   home,
   parenthesisLeft,
   parenthesisRight,
+  profile,
 };
