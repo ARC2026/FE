@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: vh(65px) 0 vw(83px) 0;
+  padding: vh(65px) 0 0 vw(83px);
   .homeButton {
     @include flex(row, center, flex-start, vw(7px));
     .homeButtonText {
@@ -108,19 +108,25 @@
           }
         }
       }
-      .overviewText {
-        background-color: #ffffff;
-        border-radius: 22px;
-        font-size: rem(17px);
-        letter-spacing: -0.04em;
-        color: $black;
-        line-height: 1.5;
-        padding: vh(17px) vw(43px) vh(17px) vw(37px);
-        width: fit-content;
-        font-family: "Pretendard";
-        font-weight: regular;
+      .overviewTextContainer {
+        @include flex(row, center, flex-end);
         margin-top: vh(18px);
         margin-bottom: vh(60px);
+        .overviewText {
+          text-align: center;
+          margin-left: vw(-18px);
+          margin-right: vw(-18px);
+          background-color: #ffffff;
+          border-radius: 22px;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          padding: vh(17px) vw(43px) vh(17px) vw(37px);
+          width: fit-content;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
       }
       .addressEnglish {
         @include flex(column, flex-start, center);

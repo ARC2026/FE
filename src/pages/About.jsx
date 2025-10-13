@@ -48,12 +48,16 @@ export default function About() {
               <div className={styles.text}>A STORY FORMS</div>
             </div>
           </div>
-          <div className={styles.overviewText}>
-            조각과 조각이 이어지는 순간, 비로소 전체가 완성된다.
-            <br />
-            개개인의 작품은 사이'를 통해 연결되며, 전시는 그 네트워크 자체.
-            <br />
-            협업, 연대, 공감의 가능성을 포착할 수 있다
+          <div className={styles.overviewTextContainer}>
+            <img src={parenthesisLeft} alt="(" style={{ zIndex: 0 }} />
+            <div className={styles.overviewText}>
+              조각과 조각이 이어지는 순간, 비로소 전체가 완성된다.
+              <br />
+              개개인의 작품은 사이'를 통해 연결되며, 전시는 그 네트워크 자체.
+              <br />
+              협업, 연대, 공감의 가능성을 포착할 수 있다
+            </div>
+            <img src={parenthesisRight} alt=")" style={{ zIndex: 0 }} />
           </div>
           {/* 두 번째 레이블 - 전시정보 */}
           <div className={styles.label}>
