@@ -8,6 +8,23 @@
   font-display: swap;
 }
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+@font-face {
+  font-family: "Questrial";
+  src: url("https://fonts.googleapis.com/css2?family=Questrial&display=swap")
+    format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dotty";
+  src: url("../assets/fonts/dotty.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {

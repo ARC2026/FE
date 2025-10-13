@@ -1,0 +1,205 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: vh(65px) 0 vh(35px) vw(83px);
+  overflow-x: hidden; // 수평 스크롤 숨김
+  .homeButton {
+    @include flex(row, center, flex-start, vw(7px));
+    cursor: pointer;
+    .homeButtonText {
+      font-size: rem(25px);
+      letter-spacing: -0.011em;
+      line-height: 1.5;
+      color: #ff3435;
+    }
+  }
+  .menuContainer {
+    position: absolute;
+    top: vh(57px);
+    right: vw(90px);
+  }
+  .title {
+    font-size: rem(135px);
+    letter-spacing: -0.04em;
+    color: #ff3435;
+    line-height: 1.5;
+    margin-top: vh(-8px);
+  }
+  .contentContainer {
+    position: relative;
+    @include flex(column, flex-end, center);
+    .content {
+      margin-top: vh(-70px);
+      background-color: #fafafa;
+      position: relative;
+      width: vw(708px);
+      padding: vh(37px) vw(40px) vh(40px) vw(40px);
+      .label {
+        @include flex(row, center, flex-start, vw(9px));
+        .labelHighlight {
+          font-family: "Pretendard";
+          font-weight: bold;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $BG_2;
+          line-height: 1.5;
+          background-color: $black;
+          padding: vh(1px) vw(5px);
+          width: fit-content;
+        }
+        .labelText {
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+      .overviewTitle {
+        @include flex(column, start, center);
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: vh(6px);
+        .firstLine {
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          .firstLineContent {
+            @include flex(row, center, center);
+            padding: 0 vw(9px) 0 vw(5px);
+            background-color: #ffffff;
+            .bracketsLeft {
+              margin-right: vw(77px);
+            }
+            .bracketsRight {
+              margin-right: vw(3px);
+            }
+            .text {
+              font-size: rem(54px);
+              letter-spacing: -0.04em;
+            }
+          }
+          .star {
+            margin-left: vw(35px);
+          }
+        }
+        .secondLine {
+          background-color: #ffffff;
+          padding: 0 vw(9px) 0 vw(5px);
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          margin-top: vh(-8px);
+          .text {
+            font-size: rem(54px);
+            letter-spacing: -0.04em;
+          }
+        }
+        .thirdLine {
+          background-color: #ffffff;
+          padding: 0 vw(9px) 0 vw(5px);
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          margin-top: vh(-8px);
+          .text {
+            font-size: rem(54px);
+            letter-spacing: -0.04em;
+          }
+        }
+      }
+      .overviewTextContainer {
+        @include flex(row, center, flex-end);
+        margin-top: vh(18px);
+        margin-bottom: vh(60px);
+        .overviewText {
+          text-align: center;
+          margin-left: vw(-18px);
+          margin-right: vw(-18px);
+          background-color: #ffffff;
+          border-radius: 22px;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          padding: vh(17px) vw(43px) vh(17px) vw(37px);
+          width: fit-content;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+      .addressEnglish {
+        @include flex(column, flex-start, center);
+        margin-top: vh(12px);
+        .addressText {
+          font-family: "Questrial";
+          font-size: rem(30px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          color: #1c1f1c;
+
+          &:last-child {
+            margin-top: vh(-12px);
+          }
+        }
+      }
+      .addressKorean {
+        font-size: rem(17px);
+        letter-spacing: -0.04em;
+        line-height: 1.5;
+        color: $black;
+        font-family: "Pretendard";
+        font-weight: regular;
+        margin-top: vh(-2px);
+      }
+      .dateContainer {
+        @include flex(row, center, flex-end);
+        .date {
+          @include flex(row, center, center, vw(1px));
+          margin-top: vh(16px);
+          margin-bottom: vh(30px);
+          right: vw(40px);
+          .dateText {
+            font-size: rem(33px);
+            letter-spacing: -0.04em;
+            line-height: 1.5;
+            color: #1c1f1c;
+            font-family: "Questrial";
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: vh(20px);
+    padding-left: vw(7px);
+    .footerTitle {
+      font-size: rem(35px);
+      letter-spacing: -0.04em;
+      line-height: 1.5;
+      color: #1c1f1c;
+      font-family: "Busan";
+    }
+    .footerContent {
+      @include flex(row, center, flex-start, vw(13px));
+      overflow: visible;
+      white-space: nowrap;
+      .footerWrapper {
+        .footerText {
+          font-size: rem(19px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          font-family: "Busan";
+        }
+      }
+    }
+  }
+}

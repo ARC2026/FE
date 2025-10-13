@@ -1,9 +1,14 @@
 import React from "react";
 
-const BracketsRight = ({ color = "#ff3435", ...props }) => (
+const BracketsRight = ({
+  color = "#ff3435",
+  width = 36,
+  height = 120,
+  ...props
+}) => (
   <svg
-    width="36"
-    height="120"
+    width={width}
+    height={height}
     viewBox="0 0 36 120"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

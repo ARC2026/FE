@@ -3,40 +3,40 @@
   @include flex(column, flex-end, center);
   gap: vw(0.03px);
   background-image: url("../../assets/menu_background.svg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 260px;
-  height: 191px;
-  padding: vh(4px) vw(15px) vh(3px) 0;
+  width: 152px;
+  height: 118px;
+  padding: vh(1px) vw(10px) vh(2px) 0;
   z-index: 1;
 
   .aboutContainer {
     @include flex(row, center, center);
-    gap: vw(16px);
+    gap: vw(9px);
     cursor: pointer;
     .about {
-      font-size: rem(40px);
+      font-size: rem(22px);
       letter-spacing: -0.011em;
       color: #ff3435;
     }
   }
   .projectContainer {
     @include flex(row, center, center);
-    gap: vw(16px);
+    gap: vw(9px);
     cursor: pointer;
     .project {
-      font-size: rem(40px);
+      font-size: rem(22px);
       letter-spacing: -0.011em;
       color: #038dcc;
     }
   }
   .mapContainer {
     @include flex(row, center, center);
-    gap: vw(16px);
+    gap: vw(9px);
     cursor: pointer;
     .map {
-      font-size: rem(40px);
+      font-size: rem(22px);
       letter-spacing: -0.011em;
       color: #b6da03;
     }
