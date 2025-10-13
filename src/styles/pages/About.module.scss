@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: vh(65px) 0 0 vw(83px);
+  padding: vh(65px) 0 vh(35px) vw(83px);
   .homeButton {
     @include flex(row, center, flex-start, vw(7px));
     .homeButtonText {
@@ -166,6 +166,30 @@
             color: #1c1f1c;
             font-family: "Questrial";
           }
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: vh(20px);
+    padding-left: vw(7px);
+    .footerTitle {
+      font-size: rem(35px);
+      letter-spacing: -0.04em;
+      line-height: 1.5;
+      color: #1c1f1c;
+      font-family: "Busan";
+    }
+    .footerContent {
+      @include flex(row, center, flex-start, vw(13px));
+      overflow: visible;
+      white-space: nowrap;
+      .footerWrapper {
+        .footerText {
+          font-size: rem(19px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          font-family: "Busan";
         }
       }
     }

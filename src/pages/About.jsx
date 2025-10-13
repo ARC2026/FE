@@ -3,7 +3,7 @@ import styles from "../styles/pages/About.module.scss";
 import BracketsLeft from "../components/BracketsLeft";
 import BracketsRight from "../components/BracketsRight";
 import Star from "../components/Star";
-import { parenthesisLeft, parenthesisRight } from "../assets";
+import { parenthesisLeft, parenthesisRight, profile } from "../assets";
 import { useNavigate } from "react-router-dom";
 
 export default function About() {
@@ -91,6 +91,68 @@ export default function About() {
       </div>
       <div className={styles.footer}>
         <div className={styles.footerTitle}>ARC_TEAM</div>
+        <div className={styles.footerContent}>
+          <div className={styles.footerWrapper}>
+            <div className={styles.office}>
+              <BracketsLeft color="#ff3435" width={18} height={64} />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <BracketsRight color="#ff3435" width={18} height={64} />
+            </div>
+            <div className={styles.footerText} style={{ color: "#ff3435" }}>
+              OFFICE
+            </div>
+          </div>
+          <div className={styles.footerWrapper}>
+            <div className={styles.planning}>
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+            </div>
+            <div className={styles.footerText} style={{ color: "#42A9D9" }}>
+              PLANNING
+            </div>
+          </div>
+          <div className={styles.footerWrapper}>
+            <div className={styles.space}>
+              <BracketsLeft color="#B6DA03" width={18} height={64} />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <BracketsRight color="#B6DA03" width={18} height={64} />
+            </div>
+            <div className={styles.footerText} style={{ color: "#B6DA03" }}>
+              SPACE
+            </div>
+          </div>
+          <div className={styles.footerWrapper}>
+            <div className={styles.design}>
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+            </div>
+            <div className={styles.footerText} style={{ color: "#ff3435" }}>
+              DESIGN
+            </div>
+          </div>
+          <div className={styles.footerWrapper}>
+            <div className={styles.web}>
+              <BracketsLeft color="#038DCC" width={18} height={64} />
+              <img src={profile} alt="프로필" />
+              <img src={profile} alt="프로필" />
+              <BracketsRight color="#038DCC" width={18} height={64} />
+            </div>
+            <div className={styles.footerText} style={{ color: "#038DCC" }}>
+              WEB
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
