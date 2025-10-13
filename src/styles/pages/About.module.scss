@@ -12,6 +12,7 @@
   overflow-x: hidden; // 수평 스크롤 숨김
   .homeButton {
     @include flex(row, center, flex-start, vw(7px));
+    cursor: pointer;
     .homeButtonText {
       font-size: rem(25px);
       letter-spacing: -0.011em;

@@ -14,6 +14,7 @@
   .aboutContainer {
     @include flex(row, center, center);
     gap: vw(16px);
+    cursor: pointer;
     .about {
       font-size: rem(40px);
       letter-spacing: -0.011em;
@@ -23,6 +24,7 @@
   .projectContainer {
     @include flex(row, center, center);
     gap: vw(16px);
+    cursor: pointer;
     .project {
       font-size: rem(40px);
       letter-spacing: -0.011em;
@@ -32,6 +34,7 @@
   .mapContainer {
     @include flex(row, center, center);
     gap: vw(16px);
+    cursor: pointer;
     .map {
       font-size: rem(40px);
       letter-spacing: -0.011em;
