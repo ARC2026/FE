@@ -53,7 +53,8 @@ export default function Home() {
         </div>
         <div className={styles.fourthLine}>
           <BracketsLeft className={styles.bracketsLeft} color="#B6DA03" />
-          <img src={date} alt="3-10.02'26" className={styles.date} />
+          {/* <div className={styles.date}>4-9.02'26</div> */}
+          <img src={date} alt="4-9.02'26" className={styles.date} />
           <BracketsRight className={styles.bracketsRight} color="#B6DA03" />
           <Star className={styles.star} color="#229BD2" />
         </div>
