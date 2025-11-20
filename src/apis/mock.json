@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 2,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 3,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 4,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 5,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",        
+      "type": "BRANDING"
+    },
+    {
+      "id": 6,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 7,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 8,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "BRANDING"
+    },
+    {
+      "id": 9,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "UX/UI"
+    },
+    {
+      "id": 10,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "SPACE"
+    },
+    {
+      "id": 11,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "GRAPHIC"
+    },
+    {
+      "id": 12,
+      "title": "DESIGN, 2025",
+      "artist": "오지샘",
+      "image": "/example.png",
+      "type": "PRODUCT"
+    }
+  ]
+}

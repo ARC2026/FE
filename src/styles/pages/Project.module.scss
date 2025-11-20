@@ -1,0 +1,289 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: vh(65px) 0 0 vw(83px);
+  overflow-x: hidden; // 수평 스크롤 숨김
+  @include flex(column, flex-start, flex-start);
+  .homeButton {
+    @include flex(row, center, flex-start, vw(7px));
+    cursor: pointer;
+    .homeButtonText {
+      font-size: rem(25px);
+      letter-spacing: -0.011em;
+      line-height: 1.5;
+      color: #ff3435;
+    }
+  }
+  .menuContainer {
+    position: absolute;
+    top: vh(57px);
+    right: vw(90px);
+  }
+  .title {
+    font-size: rem(135px);
+    letter-spacing: -0.04em;
+    color: #229BD2;
+    line-height: 1.5;
+    margin-top: vh(-8px);
+  }
+  
+  .filterBar {
+    @include flex(row, center, flex-start, vw(22px));
+    margin-top: vh(-9px);
+
+    .filterItem {
+      font-family: "BusanFont_Provisional", "Busan", sans-serif;
+      font-size: rem(25px);
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: -1.1%;
+      line-height: 150%;
+      color: #B9B9B9;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s;
+      
+      &.active {
+        color: #1C1F1C;
+      }
+    }
+  }
+
+  .bracketsContainer {
+    @include flex(row, center, flex-start, vw(1159.09px));
+    padding: vw(-8.09px);
+    margin-bottom: vh(160.06px);
+  }
+  .contentContainer {
+    position: relative;
+    @include flex(column, flex-end, center);
+    .content {
+      margin-top: vh(-70px);
+      background-color: #fafafa;
+      position: relative;
+      width: vw(708px);
+      padding: vh(37px) vw(40px) vh(40px) vw(40px);
+      .label {
+        @include flex(row, center, flex-start, vw(9px));
+        .labelHighlight {
+          font-family: "Pretendard";
+          font-weight: bold;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $BG_2;
+          line-height: 1.5;
+          background-color: $black;
+          padding: vh(1px) vw(5px);
+          width: fit-content;
+        }
+        .labelText {
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+      .overviewTitle {
+        @include flex(column, start, center);
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: vh(6px);
+        .firstLine {
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          .firstLineContent {
+            @include flex(row, center, center);
+            padding: 0 vw(9px) 0 vw(5px);
+            background-color: #ffffff;
+            .bracketsLeft {
+              margin-right: vw(77px);
+            }
+            .bracketsRight {
+              margin-right: vw(3px);
+            }
+            .text {
+              font-size: rem(54px);
+              letter-spacing: -0.04em;
+            }
+          }
+          .star {
+            margin-left: vw(35px);
+          }
+        }
+        .secondLine {
+          background-color: #ffffff;
+          padding: 0 vw(9px) 0 vw(5px);
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          margin-top: vh(-8px);
+          .text {
+            font-size: rem(54px);
+            letter-spacing: -0.04em;
+          }
+        }
+        .thirdLine {
+          background-color: #ffffff;
+          padding: 0 vw(9px) 0 vw(5px);
+          @include flex(row, center, center);
+          width: fit-content;
+          justify-content: flex-start;
+          margin-top: vh(-8px);
+          .text {
+            font-size: rem(54px);
+            letter-spacing: -0.04em;
+          }
+        }
+      }
+      .overviewTextContainer {
+        @include flex(row, center, flex-end);
+        margin-top: vh(18px);
+        margin-bottom: vh(60px);
+        .overviewText {
+          text-align: center;
+          margin-left: vw(-18px);
+          margin-right: vw(-18px);
+          background-color: #ffffff;
+          border-radius: 22px;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          padding: vh(17px) vw(43px) vh(17px) vw(37px);
+          width: fit-content;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+      .addressEnglish {
+        @include flex(column, flex-start, center);
+        margin-top: vh(12px);
+        .addressText {
+          font-family: "Questrial";
+          font-size: rem(30px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          color: #1c1f1c;
+
+          &:last-child {
+            margin-top: vh(-12px);
+          }
+        }
+      }
+      .addressKorean {
+        font-size: rem(17px);
+        letter-spacing: -0.04em;
+        line-height: 1.5;
+        color: $black;
+        font-family: "Pretendard";
+        font-weight: regular;
+        margin-top: vh(-2px);
+      }
+      .dateContainer {
+        @include flex(row, center, flex-end);
+        .date {
+          @include flex(row, center, center, vw(1px));
+          margin-top: vh(16px);
+          margin-bottom: vh(30px);
+          right: vw(40px);
+          .dateText {
+            font-size: rem(33px);
+            letter-spacing: -0.04em;
+            line-height: 1.5;
+            color: #1c1f1c;
+            font-family: "Questrial";
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: vw(1440px);
+  height: vh(266px);
+  max-width: 1440px;
+  max-height: 266px;
+  margin-top: auto;
+  padding: 0 vw(90px) vh(98px);
+  // padding: vh(40px) vw(83px) vh(40px) vw(83px);
+  @include flex(column, flex-start, flex-start);
+  position: relative;
+  
+  .footerTitle {
+    font-family: "BusanFont_Provisional", "Busan", sans-serif;
+    font-size: rem(24px);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -4%;
+    line-height: 150%;
+    color: #1C1F1C;
+    text-transform: uppercase;
+    margin-bottom: vh(24px);
+  }
+  
+  .footerContent {
+    @include flex(row, flex-end, flex-start, vw(128px));
+    width: 100%;
+    justify-content: space-between;
+    
+    .footerLeft {
+      @include flex(column, flex-start, flex-start, 0);
+      
+      .footerText {
+        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+        font-size: rem(18px);
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: -4%;
+        line-height: 150%;
+        color: #1C1F1C;
+        margin-bottom: vh(4px);
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .footerRight {
+      @include flex(column, flex-start, flex-start, 0);
+      
+      .footerText {
+        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+        font-size: rem(18px);
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: -4%;
+        line-height: 150%;
+        color: #1C1F1C;
+        margin-bottom: vh(4px);
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .footerLogo {
+    align-self: flex-end;
+    
+    img {
+      width: vw(81px);
+      height: vh(35px);
+      max-width: 81px;
+      max-height: 35px;
+    }
+  }
+}
