@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { home } from "../assets";
 import SmallMenu from "../components/SmallMenu";
 import styles from "../styles/pages/About.module.scss";
 import BracketsLeft from "../components/BracketsLeft";
 import BracketsRight from "../components/BracketsRight";
 import Star from "../components/Star";
-import { parenthesisLeft, parenthesisRight, profile } from "../assets";
+import { parenthesisLeft, parenthesisRight } from "../assets";
 import { useNavigate } from "react-router-dom";
+import teamData from "../apis/teamData.json";
+import TeamSection from "../components/TeamSection";
 
 export default function About() {
   const navigate = useNavigate();
+  const [hoveredProfile, setHoveredProfile] = useState(null);
   return (
     <div className={styles.container}>
       <div className={styles.homeButton} onClick={() => navigate("/")}>
@@ -89,73 +93,29 @@ export default function About() {
           {/* 세 번째 레이블 - 인스타그램 */}
           <div className={styles.label}>
             <div className={styles.labelHighlight}>INSTAGRAM</div>
-            <div className={styles.labelText}>@arc_project</div>
+            <a
+              className={styles.labelText}
+              href="https://www.instagram.com/arc__project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @arc__project
+            </a>
           </div>
         </div>
       </div>
       <div className={styles.footer}>
         <div className={styles.footerTitle}>ARC_TEAM</div>
         <div className={styles.footerContent}>
-          <div className={styles.footerWrapper}>
-            <div className={styles.office}>
-              <BracketsLeft color="#ff3435" width={18} height={64} />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <BracketsRight color="#ff3435" width={18} height={64} />
-            </div>
-            <div className={styles.footerText} style={{ color: "#ff3435" }}>
-              OFFICE
-            </div>
-          </div>
-          <div className={styles.footerWrapper}>
-            <div className={styles.planning}>
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-            </div>
-            <div className={styles.footerText} style={{ color: "#42A9D9" }}>
-              PLANNING
-            </div>
-          </div>
-          <div className={styles.footerWrapper}>
-            <div className={styles.space}>
-              <BracketsLeft color="#B6DA03" width={18} height={64} />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <BracketsRight color="#B6DA03" width={18} height={64} />
-            </div>
-            <div className={styles.footerText} style={{ color: "#B6DA03" }}>
-              SPACE
-            </div>
-          </div>
-          <div className={styles.footerWrapper}>
-            <div className={styles.design}>
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-            </div>
-            <div className={styles.footerText} style={{ color: "#ff3435" }}>
-              DESIGN
-            </div>
-          </div>
-          <div className={styles.footerWrapper}>
-            <div className={styles.web}>
-              <BracketsLeft color="#038DCC" width={18} height={64} />
-              <img src={profile} alt="프로필" />
-              <img src={profile} alt="프로필" />
-              <BracketsRight color="#038DCC" width={18} height={64} />
-            </div>
-            <div className={styles.footerText} style={{ color: "#038DCC" }}>
-              WEB
-            </div>
-          </div>
+          {teamData.map((team) => (
+            <TeamSection
+              key={team.id}
+              team={team}
+              hoveredProfile={hoveredProfile}
+              setHoveredProfile={setHoveredProfile}
+              styles={styles}
+            />
+          ))}
         </div>
       </div>
     </div>

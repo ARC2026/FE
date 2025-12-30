@@ -61,6 +61,7 @@
           line-height: 1.5;
           font-family: "Pretendard";
           font-weight: regular;
+          text-decoration: none;
         }
       }
       .overviewTitle {
@@ -202,4 +203,25 @@
       }
     }
   }
+}
+
+.profileWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+img.profile {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cardContainer {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  z-index: 1000;
 }
