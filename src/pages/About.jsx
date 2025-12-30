@@ -65,7 +65,7 @@ export default function About() {
           </div>
           {/* 두 번째 레이블 - 전시정보 */}
           <div className={styles.label}>
-            <div className={styles.labelHighlight}>EXHIBITION OVERVIEW</div>
+            <div className={styles.labelHighlight}>EXHIBITION INFORMATION</div>
             <div className={styles.labelText}>전시정보</div>
           </div>
           <div className={styles.addressEnglish}>
