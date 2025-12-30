@@ -1,0 +1,15 @@
+@use "../_variables.scss" as *;
+
+.container {
+  @include flex(row, flex-start, flex-start, 40px);
+  width: fit-content;
+  height: fit-content;
+
+  .secondProjectBox {
+    margin-top: 55px;
+  }
+
+  .thirdProjectBox {
+    margin-top: 110px;
+  }
+}

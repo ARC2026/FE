@@ -1,0 +1,5 @@
+@use "../_variables.scss" as *;
+
+.container {
+  @include flex(column, flex-start, flex-start, 44px);
+}

@@ -1,27 +1,29 @@
 @use "../_variables.scss" as *;
 
 .card {
+  width: fit-content;
   background-color: #ffffff;
-  border: 1px solid #229BD2;
+  border: 1px solid #229bd2;
   padding: 10px;
   @include flex(column, flex-start, flex-start, 0);
-  
+  cursor: pointer;
+
   .imageContainer {
     width: 271px;
     height: 179px;
     overflow: hidden;
-    
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  
+
   .content {
     @include flex(column, flex-start, flex-start, 0);
     margin-top: 4px;
-    
+
     .title {
       font-family: "BusanFont_Provisional", "Busan", sans-serif;
       font-size: rem(22px);
@@ -29,10 +31,10 @@
       font-style: normal;
       letter-spacing: -1.1%;
       line-height: 150%;
-      color: #1C1F1C;
+      color: #1c1f1c;
       text-transform: uppercase;
     }
-    
+
     .artist {
       font-family: "Pretendard", "Pretendard Variable", sans-serif;
       font-size: rem(17px);
@@ -40,9 +42,8 @@
       font-style: normal;
       letter-spacing: -1.1%;
       line-height: 150%;
-      color: #1C1F1C;
+      color: #1c1f1c;
       text-transform: uppercase;
     }
   }
 }
-
