@@ -1,0 +1,118 @@
+[
+  {
+    "id": "office",
+    "position": "OFFICE",
+    "color": "#ff3435",
+    "hasBrackets": true,
+    "members": [
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "planning",
+    "position": "PLANNING",
+    "color": "#42A9D9",
+    "hasBrackets": false,
+    "members": [
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "space",
+    "position": "SPACE",
+    "color": "#B6DA03",
+    "hasBrackets": true,
+    "members": [
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "design",
+    "position": "DESIGN",
+    "color": "#ff3435",
+    "hasBrackets": false,
+    "members": [
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      }
+    ]
+  },
+  {
+    "id": "web",
+    "position": "WEB",
+    "color": "#038DCC",
+    "hasBrackets": true,
+    "members": [
+      {
+        "name": "이름",
+        "img": null
+      },
+      {
+        "name": "이름",
+        "img": null
+      }
+    ]
+  }
+]
