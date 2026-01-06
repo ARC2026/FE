@@ -1,0 +1,206 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: vh(65px) 0 vh(35px) vw(83px);
+  overflow-x: hidden;
+  @include flex(column, flex-start, flex-start);
+
+  .homeButton {
+    @include flex(row, center, flex-start, vw(7px));
+    cursor: pointer;
+    .homeButtonText {
+      font-size: rem(25px);
+      letter-spacing: -0.011em;
+      line-height: 1.5;
+      color: #ff3435;
+    }
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: vh(57px);
+    right: vw(90px);
+  }
+
+  .title {
+    font-size: rem(135px);
+    letter-spacing: -0.04em;
+    color: #229bd2;
+    line-height: 1.5;
+    margin-top: vh(-8px);
+  }
+
+  .contentWrapper {
+    @include flex(row, flex-start, flex-start, vw(40px));
+    margin-top: vh(128px);
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .imageGrid {
+    @include flex(column, flex-start, flex-start, vh(20px));
+    width: vw(600px);
+    max-width: 600px;
+    flex-shrink: 0;
+
+    .backButton {
+      @include flex(row, center, center, vw(10px));
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: vh(10px);
+
+      img {
+        width: vw(16px);
+        height: vh(38px);
+      }
+
+      span {
+        font-family: "BusanFont_Provisional", "Busan", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: rem(25px);
+        line-height: 150%;
+        letter-spacing: -1.1%;
+        text-transform: uppercase;
+        color: #1c1f1c;
+      }
+    }
+
+    .imageItem {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .imageType {
+        position: absolute;
+        top: vh(10px);
+        left: vw(10px);
+        z-index: 10;
+        font-family: "Pretendard", "Pretendard Variable", sans-serif;
+        font-size: rem(16px);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        color: #1c1f1c;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: vh(5px) vw(10px);
+        border-radius: 4px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  .contentContainer {
+    position: relative;
+    @include flex(column, flex-end, flex-start);
+    flex: 1;
+    align-self: flex-start;
+
+    margin-top: calc(vh(38px) + vh(45px));
+
+    .content {
+      margin-top: 0;
+      background-color: #fafafa;
+      position: relative;
+      width: vw(708px);
+      padding: vh(37px) vw(40px) vh(40px) vw(40px);
+
+      .label {
+        @include flex(row, center, flex-start, vw(9px));
+        margin-bottom: vh(6px);
+
+        .labelHighlight {
+          font-family: "Pretendard";
+          font-weight: bold;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $BG_2;
+          line-height: 1.5;
+          background-color: $black;
+          padding: vh(1px) vw(5px);
+          width: fit-content;
+        }
+
+        .labelText {
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+
+      .titleSection {
+        @include flex(row, center, flex-start, vw(5px));
+        margin-bottom: vh(10px);
+
+        .titleText {
+          font-family: "BusanFont_Provisional", "Busan", sans-serif;
+          font-size: rem(54px);
+          letter-spacing: -0.04em;
+          color: #1c1f1c;
+        }
+
+        .asterisk {
+          color: #ff3435;
+          font-size: rem(54px);
+          margin-left: vw(5px);
+        }
+      }
+
+      .artistName {
+        font-family: "Pretendard", "Pretendard Variable", sans-serif;
+        font-size: rem(24px);
+        letter-spacing: -0.04em;
+        color: #1c1f1c;
+        margin-bottom: vh(30px);
+      }
+
+      .overviewTextContainer {
+        @include flex(row, center, flex-end);
+        margin-top: vh(18px);
+        margin-bottom: vh(60px);
+
+        .overviewText {
+          text-align: center;
+          margin-left: vw(-18px);
+          margin-right: vw(-18px);
+          background-color: #ffffff;
+          border-radius: 22px;
+          font-size: rem(17px);
+          letter-spacing: -0.04em;
+          color: $black;
+          line-height: 1.5;
+          padding: vh(17px) vw(43px) vh(17px) vw(37px);
+          width: fit-content;
+          font-family: "Pretendard";
+          font-weight: regular;
+        }
+      }
+
+      .contactText {
+        font-family: "Pretendard", "Pretendard Variable", sans-serif;
+        font-size: rem(18px);
+        letter-spacing: -0.04em;
+        color: #1c1f1c;
+        margin-top: vh(6px);
+      }
+    }
+  }
+}
+
