@@ -1,0 +1,81 @@
+@use "../_variables.scss" as *;
+
+.footer {
+  width: vw(1440px);
+  height: vh(266px);
+  max-width: 1440px;
+  max-height: 266px;
+  margin-top: auto;
+  padding: 0 vw(90px) vh(365px) 0;
+  @include flex(column, flex-start, flex-start);
+  position: relative;
+  background-color: transparent;
+
+  .footerTitle {
+    font-family: "BusanFont_Provisional", "Busan", sans-serif;
+    font-size: rem(24px);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -4%;
+    line-height: 150%;
+    color: #1c1f1c;
+    text-transform: uppercase;
+    margin-bottom: vh(24px);
+  }
+
+  .footerContent {
+    @include flex(row, flex-end, flex-start, vw(128px));
+    width: 100%;
+    justify-content: space-between;
+
+    .footerLeft {
+      @include flex(column, flex-start, flex-start, 0);
+
+      .footerText {
+        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+        font-size: rem(18px);
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: -4%;
+        line-height: 150%;
+        color: #1c1f1c;
+        margin-bottom: vh(4px);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .footerRight {
+      @include flex(column, flex-start, flex-start, 0);
+
+      .footerText {
+        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+        font-size: rem(18px);
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: -4%;
+        line-height: 150%;
+        color: #1c1f1c;
+        margin-bottom: vh(4px);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .footerLogo {
+    align-self: flex-end;
+
+    img {
+      width: vw(81px);
+      height: vh(35px);
+      max-width: 81px;
+      max-height: 35px;
+    }
+  }
+}
+

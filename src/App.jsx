@@ -5,6 +5,8 @@ import Project from "./pages/Project";
 import Map from "./pages/Map";
 import ScrollToTop from "./hooks/ScrollToTop";
 import Temp from "./pages/Temp";
+import ProjectDetail from "./pages/ProjectDetail";
+
 function App() {
   return (
     <>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/map" element={<Map />} />
           <Route path="/temp" element={<Temp />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
       </BrowserRouter>
     </>
