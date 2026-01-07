@@ -1,0 +1,126 @@
+@use "../_variables.scss" as *;
+
+.content {
+  margin-top: 0;
+  background-color: #fafafa;
+  position: relative;
+  width: 100%;
+  padding: vh(31px) vw(84px) vh(31px) vw(52px);
+
+  .titleSection {
+    @include flex(row, center, flex-start, vw(5px));
+    margin-bottom: vh(10px);
+    align-items: center;
+
+    .titleLabel {
+      font-family: "BusanFont_Provisional", "Busan", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 53px;
+      line-height: 150%;
+      letter-spacing: -4%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #1c1f1c;
+    }
+
+    .asterisk {
+      margin-left: vw(5px);
+      align-self: flex-start;
+      margin-top: vh(0px);
+      width: vw(46px);
+      height: vh(47px);
+      flex-shrink: 0;
+    }
+  }
+
+  .titleText {
+    font-family: "Pretendard", "Pretendard Variable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -4%;
+    color: #1c1f1c;
+    margin-bottom: vh(10px);
+  }
+
+  .artistName {
+    @include flex(row, flex-start, flex-start, 15px);
+    font-family: "Pretendard", "Pretendard Variable", sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.04em;
+    color: #1c1f1c;
+    margin-bottom: 53px;
+  }
+
+  .overviewSection {
+    @include flex(row, center, flex-start);
+    margin-bottom: 12px;
+    align-items: center;
+
+    .overviewLabel {
+      font-family: "Pretendard Variable", "Pretendard", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 23px;
+      line-height: 150%;
+      letter-spacing: -4%;
+      text-transform: uppercase;
+      color: #1C1F1C;
+    }
+  }
+
+  .overviewText {
+    font-family: "Pretendard Variable", "Pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: -4%;
+    text-transform: uppercase;
+    color: #1c1f1c;
+    margin-bottom: vh(10px);
+    white-space: pre-line;
+  }
+
+  .overviewText:last-of-type {
+    margin-bottom: 53px;
+  }
+
+  .contactSection {
+    @include flex(row, center, flex-start);
+    margin-top: 53px;
+    margin-bottom: 12px;
+    align-items: center;
+
+    .contactLabel {
+      font-family: "Pretendard Variable", "Pretendard", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 23px;
+      line-height: 150%;
+      letter-spacing: -4%;
+      text-transform: uppercase;
+      color: #1C1F1C;
+    }
+  }
+
+  .contactText {
+    @include flex(row, flex-start, flex-start, 24px);
+    font-family: "Pretendard", "Pretendard Variable", sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.04em;
+    color: #1c1f1c;
+
+    .contactLink {
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
