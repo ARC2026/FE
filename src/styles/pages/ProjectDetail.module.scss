@@ -8,9 +8,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: vh(65px) 0 vh(35px) vw(83px);
   overflow-x: hidden;
   @include flex(column, flex-start, flex-start);
+
+  .paddingContainer {
+    padding: vh(65px) 0 vh(118px) vw(83px);
+  }
 
   .homeButton {
     @include flex(row, center, flex-start, vw(7px));
@@ -38,17 +41,13 @@
   }
 
   .contentWrapper {
-    @include flex(row, flex-start, flex-start, vw(40px));
+    @include flex(column, flex-start, flex-start, 0);
     margin-top: vh(128px);
     width: 100%;
-    align-items: flex-start;
   }
 
-  .imageGrid {
-    @include flex(column, flex-start, flex-start, vh(20px));
-    width: vw(600px);
-    max-width: 600px;
-    flex-shrink: 0;
+  .backButtonContainer {
+    margin-bottom: vh(20px);
 
     .backButton {
       @include flex(row, center, center, vw(10px));
@@ -56,24 +55,36 @@
       border: none;
       cursor: pointer;
       padding: 0;
-      margin-bottom: vh(10px);
 
-      img {
-        width: vw(16px);
-        height: vh(38px);
+      .backButtonIcon {
+        width: 10px;
+        height: 19px;
       }
 
       span {
         font-family: "BusanFont_Provisional", "Busan", sans-serif;
         font-weight: 400;
-        font-style: normal;
-        font-size: rem(25px);
+        font-style: Regular;
+        font-size: 25px;
         line-height: 150%;
         letter-spacing: -1.1%;
         text-transform: uppercase;
         color: #1c1f1c;
       }
     }
+  }
+
+  .contentGrid {
+    @include flex(row, flex-start, flex-start, vw(40px));
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .imageColumn {
+    @include flex(column, flex-start, flex-start, vh(20px));
+    width: vw(600px);
+    max-width: 600px;
+    flex-shrink: 0;
 
     .imageItem {
       width: 100%;
@@ -106,101 +117,9 @@
 
   .contentContainer {
     position: relative;
-    @include flex(column, flex-end, flex-start);
+    @include flex(column, flex-start, flex-start);
     flex: 1;
-    align-self: flex-start;
-
-    margin-top: calc(vh(38px) + vh(45px));
-
-    .content {
-      margin-top: 0;
-      background-color: #fafafa;
-      position: relative;
-      width: vw(708px);
-      padding: vh(37px) vw(40px) vh(40px) vw(40px);
-
-      .label {
-        @include flex(row, center, flex-start, vw(9px));
-        margin-bottom: vh(6px);
-
-        .labelHighlight {
-          font-family: "Pretendard";
-          font-weight: bold;
-          font-size: rem(17px);
-          letter-spacing: -0.04em;
-          color: $BG_2;
-          line-height: 1.5;
-          background-color: $black;
-          padding: vh(1px) vw(5px);
-          width: fit-content;
-        }
-
-        .labelText {
-          font-size: rem(17px);
-          letter-spacing: -0.04em;
-          color: $black;
-          line-height: 1.5;
-          font-family: "Pretendard";
-          font-weight: regular;
-        }
-      }
-
-      .titleSection {
-        @include flex(row, center, flex-start, vw(5px));
-        margin-bottom: vh(10px);
-
-        .titleText {
-          font-family: "BusanFont_Provisional", "Busan", sans-serif;
-          font-size: rem(54px);
-          letter-spacing: -0.04em;
-          color: #1c1f1c;
-        }
-
-        .asterisk {
-          color: #ff3435;
-          font-size: rem(54px);
-          margin-left: vw(5px);
-        }
-      }
-
-      .artistName {
-        font-family: "Pretendard", "Pretendard Variable", sans-serif;
-        font-size: rem(24px);
-        letter-spacing: -0.04em;
-        color: #1c1f1c;
-        margin-bottom: vh(30px);
-      }
-
-      .overviewTextContainer {
-        @include flex(row, center, flex-end);
-        margin-top: vh(18px);
-        margin-bottom: vh(60px);
-
-        .overviewText {
-          text-align: center;
-          margin-left: vw(-18px);
-          margin-right: vw(-18px);
-          background-color: #ffffff;
-          border-radius: 22px;
-          font-size: rem(17px);
-          letter-spacing: -0.04em;
-          color: $black;
-          line-height: 1.5;
-          padding: vh(17px) vw(43px) vh(17px) vw(37px);
-          width: fit-content;
-          font-family: "Pretendard";
-          font-weight: regular;
-        }
-      }
-
-      .contactText {
-        font-family: "Pretendard", "Pretendard Variable", sans-serif;
-        font-size: rem(18px);
-        letter-spacing: -0.04em;
-        color: #1c1f1c;
-        margin-top: vh(6px);
-      }
-    }
+    min-width: 0; // flex item이 overflow 방지
   }
 }
 

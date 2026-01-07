@@ -6,7 +6,7 @@
   max-width: 1440px;
   max-height: 266px;
   margin-top: auto;
-  padding: 0 vw(90px) vh(365px) 0;
+  padding: vh(40px) vw(90px) vh(365px) vw(90px);
   @include flex(column, flex-start, flex-start);
   position: relative;
   background-color: transparent;

@@ -9,7 +9,7 @@ export default function ProjectBox({ projects = [] }) {
           key={project.id}
           image={project.image}
           title={project.title}
-          artist={project.artist}
+          team={project.team}
           id={project.id}
         />
       ))}
