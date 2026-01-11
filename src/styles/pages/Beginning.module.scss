@@ -1,0 +1,42 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .menuContainer {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .backgroundVideo {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .content {
+    width: 100%;
+    max-width: 1440px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    @include flex(column, center, center, vh(4px));
+    .text {
+      font-size: rem(36px);
+      letter-spacing: -0.04em;
+    }
+  }
+}

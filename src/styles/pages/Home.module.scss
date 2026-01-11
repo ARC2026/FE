@@ -3,49 +3,67 @@
 .container {
   width: 100%;
   min-height: 100vh;
+  @include flex(column, center, center);
+  padding: vh(40px) vw(77px) vh(81px) vw(77px);
+  position: relative;
+  overflow: hidden;
   background-image: url("../../assets/background.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @include flex(column, center, center);
-  padding: vh(40px) vw(77px) vh(81px) vw(77px);
-  position: relative;
+  background-attachment: fixed;
+
   .content {
     width: 100%;
     max-width: 1440px;
+    margin-top: vh(56px);
     @include flex(column, center, center);
+
+    &.fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
     .firstLine {
       @include flex(row, center, center);
       width: 100%;
       justify-content: flex-start;
       .bracketsLeft {
-        margin-right: vw(227px);
+        margin-right: vw(384px);
       }
       .bracketsRight {
         margin-right: vw(12px);
       }
       .text {
-        font-size: rem(160px);
+        font-size: rem(144px);
         letter-spacing: -0.06em;
       }
     }
     .secondLine {
-      @include flex(row, center, center);
+      @include flex(row, center, center, vw(8px));
       width: 100%;
       justify-content: flex-start;
-      margin-top: vh(-77px);
+      height: vh(151px);
       .text {
-        font-size: rem(160px);
+        font-size: rem(144px);
         letter-spacing: -0.06em;
+        background-color: #ff3435;
+        height: vh(151px);
+        color: white;
+        padding: 0 vw(15px);
+      }
+      .starContainer {
+        font-size: rem(200px);
+        color: #229bd2;
+        line-height: 1.26;
+        letter-spacing: 0.11em;
       }
     }
     .thirdLine {
       @include flex(row, center, center);
       width: 100%;
       justify-content: flex-start;
-      margin-top: vh(-77px);
       .text {
-        font-size: rem(160px);
+        font-size: rem(144px);
         letter-spacing: -0.06em;
       }
     }
@@ -53,26 +71,15 @@
       @include flex(row, flex-start, center);
       width: 100%;
       justify-content: flex-start;
-      margin-top: vh(-24px);
       .date {
-        width: vw(663px);
-        height: vh(113px);
-        margin: 0 vw(24px) vh(11px) vw(24px);
-      }
-      // .date {
-      //   font-family: "Dotty", sans-serif;
-      //   font-size: rem(320px);
-      //   letter-spacing: -0.06em;
-      //   line-height: 1;
-      // }
-      .star {
-        margin-left: vw(17px);
+        width: vw(550px);
+        margin: 0 vw(18px);
       }
     }
     .bottomContent {
       @include flex(row, flex-end, space-between);
       width: 100%;
-      margin-top: vh(135px);
+      margin-top: vh(70px);
       padding-right: vw(13px);
       .addressContainer {
         :first-child {
@@ -86,27 +93,15 @@
       }
     }
   }
-  .arcContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    @include flex(row, center, center);
-    background-color: rgba(255, 80, 80, 0.9);
-    -webkit-backdrop-filter: invert(1);
-    backdrop-filter: invert(1); // 겹치는 영역만 역상
-    pointer-events: none;
-    -webkit-mask-image: url("../../assets/ARC.svg");
-    mask-image: url("../../assets/ARC.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
-    transition: transform 0.1s ease-out;
-    will-change: transform;
   }
 }

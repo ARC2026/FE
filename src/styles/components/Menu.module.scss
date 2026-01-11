@@ -1,44 +1,61 @@
 @use "../_variables.scss" as *;
 .container {
-  @include flex(column, flex-end, center);
+  @include flex(row, center, space-between);
   gap: vw(0.03px);
-  background-image: url("../../assets/menu_background.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 191px;
-  padding: vh(4px) vw(15px) vh(3px) 0;
-  z-index: 1;
+  width: 100%;
+  z-index: 100;
+  padding: 0 vw(100px);
+  position: absolute;
+  top: vh(56px);
+  left: 0;
 
-  .aboutContainer {
+  .homeContainer {
     @include flex(row, center, center);
-    gap: vw(16px);
+    gap: vw(10px);
     cursor: pointer;
-    .about {
-      font-size: rem(40px);
+    .homeIcon {
+      width: vw(39px);
+      height: vw(34px);
+    }
+    .home {
+      font-size: rem(25px);
       letter-spacing: -0.011em;
       color: #ff3435;
     }
   }
-  .projectContainer {
-    @include flex(row, center, center);
-    gap: vw(16px);
+
+  .menuContainer {
+    @include flex(row, center, center, vw(42px));
     cursor: pointer;
-    .project {
-      font-size: rem(40px);
-      letter-spacing: -0.011em;
-      color: #038dcc;
+    .aboutContainer {
+      @include flex(row, center, center);
+      gap: vw(10px);
+      cursor: pointer;
+      .about {
+        font-size: rem(22px);
+        letter-spacing: -0.011em;
+        color: #ff3435;
+      }
     }
-  }
-  .mapContainer {
-    @include flex(row, center, center);
-    gap: vw(16px);
-    cursor: pointer;
-    .map {
-      font-size: rem(40px);
-      letter-spacing: -0.011em;
-      color: #b6da03;
+    .projectContainer {
+      @include flex(row, center, center);
+      gap: vw(10px);
+      cursor: pointer;
+      .project {
+        font-size: rem(22px);
+        letter-spacing: -0.011em;
+        color: #038dcc;
+      }
+    }
+    .mapContainer {
+      @include flex(row, center, center);
+      gap: vw(10px);
+      cursor: pointer;
+      .map {
+        font-size: rem(22px);
+        letter-spacing: -0.011em;
+        color: #b6da03;
+      }
     }
   }
 }
