@@ -26,31 +26,33 @@ export default function MapInteractive({ mapImageSrc, mapConfig }) {
         className={styles.mapImage}
       />
       
-      {/* 마커들 */}
-      {artworks.map((artwork) => {
-        const isHovered = hoveredMarkerId === artwork.id;
-        return (
-          <div
-            key={artwork.id}
-            className={`${styles.marker} ${styles[artwork.type]}`}
-            style={{
-              left: `${artwork.left}%`,
-              top: `${artwork.top}%`,
-              // 호버된 마커는 최상위로, 그 외에는 ID 기반 z-index
-              zIndex: isHovered ? 1000 : artwork.id,
-            }}
-            onMouseEnter={() => setHoveredMarkerId(artwork.id)}
-            onMouseLeave={() => setHoveredMarkerId(null)}
-          >
-            {/* 툴팁 */}
-            {isHovered && (
-              <div className={styles.tooltip}>
-                ID: {artwork.id}
-              </div>
-            )}
-          </div>
-        );
-      })}
+      {/* 마커들 - ID 순서대로 정렬하여 낮은 ID가 위에 오도록 */}
+      {artworks
+        .sort((a, b) => a.id - b.id) // ID 오름차순 정렬
+        .map((artwork) => {
+          const isHovered = hoveredMarkerId === artwork.id;
+          return (
+            <div
+              key={artwork.id}
+              className={`${styles.marker} ${styles[artwork.type]}`}
+              style={{
+                left: `${artwork.left}%`,
+                top: `${artwork.top}%`,
+                // 호버된 마커는 최상위로, 그 외에는 ID 기반 z-index (낮은 ID가 더 높은 z-index)
+                zIndex: isHovered ? 1000 : 100 - artwork.id,
+              }}
+              onMouseEnter={() => setHoveredMarkerId(artwork.id)}
+              onMouseLeave={() => setHoveredMarkerId(null)}
+            >
+              {/* 툴팁 */}
+              {isHovered && (
+                <div className={styles.tooltip}>
+                  ID: {artwork.id}
+                </div>
+              )}
+            </div>
+          );
+        })}
     </div>
   );
 }

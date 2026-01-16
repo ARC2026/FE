@@ -129,7 +129,7 @@
   .leftArrow {
     position: absolute;
     top: 50%;
-    left: calc(50% + 37px);
+    left: calc(50% + vw(13px));
     transform: translateY(-50%);
     width: vw(17px);
     height: vh(16px);
@@ -139,7 +139,7 @@
   .arrow {
     position: absolute;
     top: 50%;
-    left: calc(50% + 605px);
+    left: calc(50% + 597px);
     transform: translateY(-50%);
     width: vw(17px);
     height: vh(16px);

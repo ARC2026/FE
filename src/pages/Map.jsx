@@ -23,9 +23,22 @@ export default function Map() {
   
   const tabs = ["ALL", "PLACE1", "PLACE2"];
   
-  const totalProjects = mockData.projects.length;
+  // activeTab에 따라 필터링된 프로젝트 수 계산
+  const getFilteredProjects = () => {
+    let projects = mockData.projects;
+    if (activeTab === "PLACE1") {
+      projects = projects.filter(project => project.id <= 35);
+    } else if (activeTab === "PLACE2") {
+      projects = projects.filter(project => project.id >= 36);
+    }
+    return projects;
+  };
+  
+  const filteredProjects = getFilteredProjects();
+  const totalProjects = filteredProjects.length;
   const totalPages = Math.ceil(totalProjects / ITEMS_PER_PAGE);
   const isLastPage = currentPage >= totalPages - 1;
+  const isPlace2 = activeTab === "PLACE2";
 
   const handleNextPage = () => {
     if (!isLastPage) {
@@ -98,7 +111,9 @@ export default function Map() {
         </div>
         <div className={styles.dividerSection}>
           <div className={styles.verticalLine}></div>
-          {currentPage > 0 && (
+        </div>
+        <div className={styles.rightGroup}>
+          {!isPlace2 && currentPage > 0 && (
             <img 
               src={leftArrow} 
               className={styles.leftArrow} 
@@ -107,7 +122,10 @@ export default function Map() {
               style={{ cursor: 'pointer' }}
             />
           )}
-          {!isLastPage && (
+          <div className={styles.rightSection}>
+            <MapProjectList currentPage={currentPage} activeTab={activeTab} />
+          </div>
+          {!isPlace2 && !isLastPage && (
             <img 
               src={rightArrow} 
               className={styles.arrow} 
@@ -116,9 +134,6 @@ export default function Map() {
               style={{ cursor: 'pointer' }}
             />
           )}
-        </div>
-        <div className={styles.rightSection}>
-          <MapProjectList currentPage={currentPage} activeTab={activeTab} />
         </div>
       </div>
       <Footer />

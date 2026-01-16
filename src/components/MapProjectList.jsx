@@ -12,7 +12,7 @@ export default function MapProjectList({ currentPage = 0, activeTab = "ALL" }) {
   if (activeTab === "PLACE1") {
     allProjects = allProjects.filter(project => project.id <= 35);
   } else if (activeTab === "PLACE2") {
-    allProjects = allProjects.filter(project => project.id >= 36);
+    allProjects = allProjects.filter(project => project.id >= 35);
   }
   // ALL일 때는 필터링 없음
   
