@@ -86,7 +86,7 @@ export default function About() {
           <div className={styles.dateContainer}>
             <div className={styles.date}>
               <BracketsLeft color="#ff3435" width={8} height={30} />
-              <div className={styles.dateText}>2026.02.4-9</div>
+              <div className={styles.dateText}>2026.02.04-09</div>
               <BracketsRight color="#ff3435" width={8} height={30} />
             </div>
           </div>

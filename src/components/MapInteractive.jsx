@@ -1,15 +1,27 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/components/MapInteractive.module.scss";
+import mockData from "../apis/mock2.json";
 
 export default function MapInteractive({ mapImageSrc, mapConfig }) {
   const [hoveredMarkerId, setHoveredMarkerId] = useState(null);
+  const navigate = useNavigate();
   
   if (!mapConfig) {
     return null;
   }
 
   const { artworks, fixedSize } = mapConfig;
-  // const { artworks, viewBox } = mapConfig;
+
+  // 프로젝트 데이터 가져오기
+  const getProjectById = (id) => {
+    return mockData.projects.find(project => project.id === id);
+  };
+
+  // 마커 클릭 시 프로젝트 상세 페이지로 이동
+  const handleMarkerClick = (id) => {
+    navigate(`/project/${id}`);
+  };
 
   return (
     <div 
@@ -32,6 +44,8 @@ export default function MapInteractive({ mapImageSrc, mapConfig }) {
         .sort((a, b) => a.id - b.id) // ID 오름차순 정렬
         .map((artwork) => {
           const isHovered = hoveredMarkerId === artwork.id;
+          const project = isHovered ? getProjectById(artwork.id) : null;
+          
           return (
             <div
               key={artwork.id}
@@ -44,11 +58,22 @@ export default function MapInteractive({ mapImageSrc, mapConfig }) {
               }}
               onMouseEnter={() => setHoveredMarkerId(artwork.id)}
               onMouseLeave={() => setHoveredMarkerId(null)}
+              onClick={() => handleMarkerClick(artwork.id)}
             >
-              {/* 툴팁 */}
-              {isHovered && (
-                <div className={styles.tooltip}>
-                  ID: {artwork.id}
+              {/* 프로젝트 카드 */}
+              {isHovered && project && (
+                <div className={`${styles.projectCard} ${artwork.id >= 35 ? styles.place2Card : styles.place1Card}`}>
+                  <div className={styles.cardImageWrapper}>
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className={styles.cardImage}
+                    />
+                  </div>
+                  <div className={styles.cardInfo}>
+                    <h3 className={styles.cardTitle}>{project.title}</h3>
+                    <p className={styles.cardTeam}>{project.team}</p>
+                  </div>
                 </div>
               )}
             </div>
