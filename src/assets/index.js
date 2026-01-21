@@ -8,6 +8,8 @@ import parenthesisRight from "./parenthesis_right.svg";
 import profile from "./profile.png";
 import projectSample from "./project_sample.png";
 import fragments from "./fragments.svg";
+import rixfont from "./rixfont.svg";
+import photomate from "./photomate.svg";
 
 // Profile images
 import profile_operations_parkseoyoung from "./profiles/1. Operationteam_운영위원장_박서영.png";
@@ -40,6 +42,8 @@ export {
   profile,
   projectSample,
   fragments,
+  rixfont,
+  photomate,
   // Profile images
   profile_operations_parkseoyoung,
   profile_operations_leejiwoo,

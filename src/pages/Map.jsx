@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { home } from "../assets";
-import SmallMenu from "../components/SmallMenu";
+import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import MapInteractive from "../components/MapInteractive";
 import MapProjectList from "../components/MapProjectList";
@@ -17,7 +15,6 @@ import { mapConfigs } from "../data/mapData";
 const ITEMS_PER_PAGE = 20;
 
 export default function Map() {
-  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
   const [activeTab, setActiveTab] = useState("ALL");
   
@@ -75,13 +72,7 @@ export default function Map() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.homeButton} onClick={() => navigate("/")}>
-        <img src={home} alt="home" />
-        <div className={styles.homeButtonText}>HOME</div>
-      </div>
-      <div className={styles.menuContainer}>
-        <SmallMenu />
-      </div>
+      <Menu />
       <div className={styles.titleSection}>
         <div className={styles.title}>MAP</div>
         <div className={styles.tabBar}>

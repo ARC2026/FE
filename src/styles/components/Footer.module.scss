@@ -45,6 +45,21 @@
           margin-bottom: 0;
         }
       }
+
+      .footerLink {
+        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+        font-size: rem(18px);
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: -4%;
+        line-height: 150%;
+        color: #1c1f1c;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .footerRight {
@@ -62,6 +77,18 @@
 
         &:last-child {
           margin-bottom: 0;
+        }
+      }
+
+      .sponsorLogos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: vh(4px);
+
+        img {
+          height: auto;
         }
       }
     }
