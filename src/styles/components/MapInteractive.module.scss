@@ -3,6 +3,8 @@
 .container {
   position: relative;
   width: 100%;
+  max-width: 100%; // 부모 크기를 넘지 않도록 제한
+  box-sizing: border-box; // padding 포함 크기 계산
   // aspect-ratio는 인라인 스타일로 동적 할당
 }
 

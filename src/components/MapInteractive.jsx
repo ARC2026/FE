@@ -15,7 +15,8 @@ export default function MapInteractive({ mapImageSrc, mapConfig }) {
     <div 
       className={styles.container}
       style={{
-        width: `${fixedSize.width}px`,
+        width: '100%', // 부모 크기에 맞춤
+        maxWidth: `${fixedSize.width}px`, // 최대 크기 제한
         height: `${fixedSize.height}px`
       }}
     >

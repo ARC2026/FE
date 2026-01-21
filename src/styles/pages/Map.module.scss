@@ -85,13 +85,13 @@
   // ALL 탭용 leftSection
   .leftSectionAll {
     @extend .leftSection;
-    padding-right: 27.85px; // dividerSection의 margin-left를 padding-right로 이동
+    margin-right: 27.85px; // dividerSection과의 간격
   }
 
   // PLACE1 탭용 leftSection
   .leftSectionPlace1 {
     @extend .leftSection;
-    padding-right: 74.5px; // dividerSection의 margin-left를 padding-right로 이동
+    margin-right: 74.5px; // dividerSection과의 간격
   }
 
   // PLACE2 탭용 leftSection

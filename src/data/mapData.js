@@ -41,7 +41,7 @@ const allMapData = {
     { order: 32, cx: 535.406, cy: 149.14, type: 'place1' },
     { order: 33, cx: 524.248, cy: 198.14, type: 'place1' },
     { order: 34, cx: 409.859, cy: 148.748, type: 'place1' },
-    
+
     // Place 2 (파란색) - SVG에서 추출한 원본 좌표
     { order: 35, cx: 460.232, cy: 297.274, type: 'place2' },
     { order: 36, cx: 405.414, cy: 367.14, type: 'place2' },
@@ -65,48 +65,46 @@ const allMapData = {
 };
 
 // PLACE1 탭 데이터 (map_place1.svg 기준)
-// viewBox: "0 0 649 339"
+// viewBox: "0 0 629 358"
 const place1MapData = {
-  viewBox: { width: 649, height: 339 },
-  fixedSize: { width: 968, height: 532.4 }, // 고정 픽셀 크기 (10% 더 확대: 880 * 1.1 = 968, 484 * 1.1 = 532.4)
-  // fixedSize: { width: 623.85, height: 343.05 }, // 고정 픽셀 크기 (캡쳐 기준)
+  viewBox: { width: 629, height: 358 },
+  fixedSize: { width: 968, height: 550.8 }, // 고정 픽셀 크기 (비율 유지: 968 * 358/629 = 550.8)
   rawArtworks: [
-    // map_place1.svg에서 추출한 좌표 (1-35번)
-    { order: 1, cx: 79.7703, cy: 230.06, type: 'place1' },
-    { order: 2, cx: 113.208, cy: 230.06, type: 'place1' },
-    { order: 3, cx: 145.229, cy: 230.06, type: 'place1' },
-    { order: 4, cx: 177.696, cy: 230.06, type: 'place1' },
-    { order: 5, cx: 210.163, cy: 230.06, type: 'place1' },
-    { order: 6, cx: 254.442, cy: 230.06, type: 'place1' },
-    { order: 7, cx: 287.442, cy: 230.06, type: 'place1' },
-    { order: 8, cx: 339.893, cy: 230.06, type: 'place1' },
-    { order: 9, cx: 372.356, cy: 230.06, type: 'place1' },
-    { order: 10, cx: 404.656, cy: 230.06, type: 'place1' },
-    { order: 11, cx: 436.856, cy: 228.066, type: 'place1' },
-    { order: 12, cx: 436.856, cy: 213.024, type: 'place1' },
-    { order: 13, cx: 436.856, cy: 198.778, type: 'place1' },
-    { order: 14, cx: 436.856, cy: 183.648, type: 'place1' },
-    { order: 15, cx: 436.856, cy: 169.348, type: 'place1' },
-    { order: 16, cx: 434.356, cy: 148.555, type: 'place1' },
-    { order: 17, cx: 404.056, cy: 148.555, type: 'place1' },
-    { order: 18, cx: 348.493, cy: 182.448, type: 'place1' },
-    { order: 19, cx: 275.493, cy: 182.448, type: 'place1' },
-    { order: 20, cx: 310.608, cy: 157.066, type: 'place1' },
-    { order: 21, cx: 210.763, cy: 165.153, type: 'place1' },
-    { order: 22, cx: 210.763, cy: 150.653, type: 'place1' },
-    { order: 23, cx: 210.763, cy: 136.153, type: 'place1' },
-    { order: 24, cx: 210.763, cy: 121.653, type: 'place1' },
-    { order: 25, cx: 210.763, cy: 107.153, type: 'place1' },
-    { order: 26, cx: 295.842, cy: 101.7048, type: 'place1' },
-    { order: 27, cx: 328.363, cy: 101.7048, type: 'place1' },
-    { order: 28, cx: 370.363, cy: 101.7048, type: 'place1' },
-    { order: 29, cx: 401.373, cy: 101.7048, type: 'place1' },
-    { order: 30, cx: 432.363, cy: 101.7048, type: 'place1' },
-    { order: 31, cx: 463.626, cy: 101.7048, type: 'place1' },
-    { order: 32, cx: 494.653, cy: 101.7048, type: 'place1' },
-    { order: 33, cx: 465.711, cy: 162.007, type: 'place1' },
-    { order: 34, cx: 587.359, cy: 133.153, type: 'place1' },
-    { order: 35, cx: 587.309, cy: 189.996, type: 'place1' },
+    // map_place1.svg에서 추출한 좌표 (1-34번)
+    { order: 1, cx: 80.2341, cy: 259.433, type: 'place1' },
+    { order: 2, cx: 113.646, cy: 259.433, type: 'place1' },
+    { order: 3, cx: 145.642, cy: 259.433, type: 'place1' },
+    { order: 4, cx: 178.084, cy: 259.433, type: 'place1' },
+    { order: 5, cx: 210.523, cy: 259.433, type: 'place1' },
+    { order: 6, cx: 255.115, cy: 259.433, type: 'place1' },
+    { order: 7, cx: 287.646, cy: 259.433, type: 'place1' },
+    { order: 8, cx: 320.002, cy: 259.433, type: 'place1' },
+    { order: 9, cx: 352.539, cy: 259.433, type: 'place1' },
+    { order: 10, cx: 384.966, cy: 259.433, type: 'place1' },
+    { order: 11, cx: 433.703, cy: 242.531, type: 'place1' },
+    { order: 12, cx: 433.703, cy: 225.007, type: 'place1' },
+    { order: 13, cx: 433.703, cy: 206.889, type: 'place1' },
+    { order: 14, cx: 433.703, cy: 189.896, type: 'place1' },
+    { order: 15, cx: 401.824, cy: 163.988, type: 'place1' },
+    { order: 16, cx: 420.951, cy: 145.094, type: 'place1' },
+    { order: 17, cx: 344.443, cy: 202.756, type: 'place1' },
+    { order: 18, cx: 275.916, cy: 202.756, type: 'place1' },
+    { order: 19, cx: 310.83, cy: 171.694, type: 'place1' },
+    { order: 20, cx: 211.134, cy: 181.124, type: 'place1' },
+    { order: 21, cx: 211.134, cy: 164.259, type: 'place1' },
+    { order: 22, cx: 211.134, cy: 147.599, type: 'place1' },
+    { order: 23, cx: 211.134, cy: 129.534, type: 'place1' },
+    { order: 24, cx: 211.134, cy: 112.6691, type: 'place1' },
+    { order: 25, cx: 258.369, cy: 105.6242, type: 'place1' },
+    { order: 26, cx: 293.435, cy: 105.6242, type: 'place1' },
+    { order: 27, cx: 327.736, cy: 105.6242, type: 'place1' },
+    { order: 28, cx: 362.038, cy: 105.6242, type: 'place1' },
+    { order: 29, cx: 396.341, cy: 105.6242, type: 'place1' },
+    { order: 30, cx: 430.646, cy: 105.6242, type: 'place1' },
+    { order: 31, cx: 587.617, cy: 141.381, type: 'place1' },
+    { order: 32, cx: 599.474, cy: 177.701, type: 'place1' },
+    { order: 33, cx: 587.617, cy: 211.77, type: 'place1' },
+    { order: 34, cx: 466.064, cy: 177.484, type: 'place1' },
   ],
 };
 
@@ -145,7 +143,7 @@ const convertArtworks = (rawArtworks, viewBoxWidth, viewBoxHeight) => {
     .map((item) => {
       const left = (item.cx / viewBoxWidth) * 100;
       const top = (item.cy / viewBoxHeight) * 100;
-      
+
       return {
         id: item.order,
         left: parseFloat(left.toFixed(2)),

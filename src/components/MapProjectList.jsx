@@ -7,15 +7,15 @@ const ITEMS_PER_PAGE = 20;
 export default function MapProjectList({ currentPage = 0, activeTab = "ALL" }) {
   const navigate = useNavigate();
   let allProjects = mockData.projects;
-  
+
   // activeTab에 따라 프로젝트 필터링
   if (activeTab === "PLACE1") {
-    allProjects = allProjects.filter(project => project.id <= 35);
+    allProjects = allProjects.filter(project => project.id <= 34);
   } else if (activeTab === "PLACE2") {
     allProjects = allProjects.filter(project => project.id >= 35);
   }
   // ALL일 때는 필터링 없음
-  
+
   // 현재 페이지에 표시할 프로젝트 계산
   const startIndex = currentPage * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -32,8 +32,8 @@ export default function MapProjectList({ currentPage = 0, activeTab = "ALL" }) {
       onClick={() => navigate(`/project/${project.id}`)}
     >
       <div className={styles.projectHeader}>
-        <div 
-          className={`${styles.projectNumber} ${project.id >= 36 ? styles.projectNumberBlue : ''}`}
+        <div
+          className={`${styles.projectNumber} ${project.id >= 35 ? styles.projectNumberBlue : ''}`}
         >
           {project.id}
         </div>
@@ -42,8 +42,8 @@ export default function MapProjectList({ currentPage = 0, activeTab = "ALL" }) {
       <div className={styles.projectTeam}>
         {Array.isArray(project.artist)
           ? project.artist.map((name, index) => (
-              <span key={index}>{name}</span>
-            ))
+            <span key={index}>{name}</span>
+          ))
           : project.team}
       </div>
     </div>
