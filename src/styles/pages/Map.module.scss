@@ -1,0 +1,158 @@
+@use "../_variables.scss" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: vh(65px) 0 0 vw(83px);
+  overflow-x: hidden;
+  @include flex(column, flex-start, flex-start);
+
+  .homeButton {
+    @include flex(row, center, flex-start, vw(7px));
+    cursor: pointer;
+
+    .homeButtonText {
+      font-size: rem(25px);
+      letter-spacing: -0.011em;
+      line-height: 1.5;
+      color: #ff3435;
+    }
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: vh(57px);
+    right: vw(90px);
+  }
+
+  .titleSection {
+    @include flex(row, flex-start, flex-start, 15px);
+    align-items: flex-end;
+    margin-top: 42px;
+    margin-bottom: 34px;
+  }
+
+  .title {
+    font-size: 135px;
+    letter-spacing: -0.04em;
+    color: #B6DA03;
+    line-height: 1;
+  }
+
+  .tabBar {
+    @include flex(row, center, flex-start, 22px);
+    align-items: flex-end;
+    padding-bottom: 13px;
+  }
+
+  .tabItem {
+    font-family: "BusanFont_Provisional", "Busan", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -1.1%;
+    line-height: 1.5;
+    color: #b9b9b9;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &.active {
+      color: #1c1f1c;
+    }
+  }
+
+  .contentWrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 34px;
+    margin-bottom: 260px;
+    min-height: 500px; // 최소 높이 설정
+  }
+
+  .leftSection {
+    display: flex;
+    justify-content: center; // x축 중앙 정렬
+    max-width: vw(600px);
+    min-width: 0;
+  }
+
+  // ALL 탭용 leftSection
+  .leftSectionAll {
+    @extend .leftSection;
+    margin-right: 27.85px; // dividerSection과의 간격
+  }
+
+  // PLACE1 탭용 leftSection
+  .leftSectionPlace1 {
+    @extend .leftSection;
+    margin-right: 74.5px; // dividerSection과의 간격
+  }
+
+  // PLACE2 탭용 leftSection
+  .leftSectionPlace2 {
+    @extend .leftSection;
+    padding-top: 91px;
+    padding-right: 0; // PLACE2는 margin-left가 없었으므로 0
+  }
+
+  .dividerSection {
+    position: absolute;
+    left: vw(632px);
+    top: 0;
+    height: vh(1035px); // 고정 길이 (원하는 값으로 조정 가능)
+    max-height: 855px;
+    width: vw(50px);
+    min-width: vw(50px);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+
+  .verticalLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: #1c1f1c;
+  }
+
+  .leftArrow {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + vw(13px));
+    transform: translateY(-50%);
+    width: vw(17px);
+    height: vh(16px);
+    z-index: 10;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 597px);
+    transform: translateY(-50%);
+    width: vw(17px);
+    height: vh(16px);
+    z-index: 10;
+  }
+
+  .rightSection {
+    position: absolute;
+    left: calc(vw(632px) + vw(50px) + 77px); // dividerSection의 left + width + 77px 간격
+    top: 0;
+    bottom: 0;
+    width: vw(400px);
+    max-width: vw(400px);
+    min-width: 0;
+  }
+}

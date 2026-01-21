@@ -1,0 +1,83 @@
+@use "../_variables.scss" as *;
+
+.container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  padding-right: vw(10px);
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: vh(20px);
+}
+
+.projectCard {
+  @include flex(column, flex-start, flex-start, 0);
+  cursor: pointer;
+  padding: vh(10px) 0;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.projectHeader {
+  @include flex(row, flex-start, flex-start, 12px);
+  align-items: flex-start;
+}
+
+.projectNumber {
+  @include flex(row, center, center);
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background-color: #FF34354D;
+  color: #FF3435;
+  font-family: "BusanFont_Provisional", sans-serif;
+  font-size: rem(16.55px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: -4%;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.projectNumberBlue {
+    background-color: #229BD24D; // 25% opacity
+    color: #229BD2; // 100% opacity
+  }
+}
+
+.projectTitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: rem(16px);
+  font-weight: 600;
+  font-style: normal;
+  color: #000000;
+  line-height: 150%;
+  letter-spacing: -4%;
+  text-transform: uppercase;
+}
+
+.projectTeam {
+  @include flex(row, flex-start, center, 8px);
+  margin-top: 5px;
+  font-family: "Pretendard", sans-serif;
+  font-size: rem(14px);
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  line-height: 150%;
+  letter-spacing: -4%;
+  text-transform: uppercase;
+  flex-wrap: nowrap;
+
+  span {
+    white-space: nowrap;
+  }
+}
