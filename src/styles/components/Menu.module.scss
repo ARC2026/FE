@@ -27,10 +27,17 @@
   .menuContainer {
     @include flex(row, center, center, vw(42px));
     cursor: pointer;
+
+    .bracket {
+      font-size: rem(22px);
+      color: inherit;
+    }
+
     .aboutContainer {
       @include flex(row, center, center);
-      gap: vw(10px);
+      gap: vw(6px);
       cursor: pointer;
+      color: #ff3435;
       .about {
         font-size: rem(22px);
         letter-spacing: -0.011em;
@@ -39,8 +46,9 @@
     }
     .projectContainer {
       @include flex(row, center, center);
-      gap: vw(10px);
+      gap: vw(6px);
       cursor: pointer;
+      color: #038dcc;
       .project {
         font-size: rem(22px);
         letter-spacing: -0.011em;
@@ -49,8 +57,9 @@
     }
     .mapContainer {
       @include flex(row, center, center);
-      gap: vw(10px);
+      gap: vw(6px);
       cursor: pointer;
+      color: #b6da03;
       .map {
         font-size: rem(22px);
         letter-spacing: -0.011em;

@@ -132,7 +132,7 @@ export default function Home() {
       if (!homeVideoRef.current) return;
 
       // 아래로 스크롤할 때만 재생 (deltaY > 0)
-      if (e.deltaY > 0) {
+        if (e.deltaY > 0) {
         lastScrollTime.current = Date.now();
 
         // 스크롤 속도 계산
@@ -202,14 +202,14 @@ export default function Home() {
       )}
 
       {showHome && (
-        <div className={styles.container}>
+    <div className={styles.container}>
           <Menu />
           <div
             className={`${styles.content} ${
               isAnimating ? styles.fadeInUp : ""
             }`}
           >
-            <div className={styles.firstLine}>
+        <div className={styles.firstLine}>
               <BracketsLeft
                 className={styles.bracketsLeft}
                 color="#ff3435"
@@ -222,9 +222,9 @@ export default function Home() {
                 width={32}
                 height={110}
               />
-              <div className={styles.text}>BETWEEN</div>
-            </div>
-            <div className={styles.secondLine}>
+          <div className={styles.text}>BETWEEN</div>
+        </div>
+        <div className={styles.secondLine}>
               <img
                 src={fragments}
                 alt="fragments"
@@ -232,38 +232,38 @@ export default function Home() {
               />
               <div className={styles.starContainer}>*</div>
               <div className={styles.starContainer}>*</div>
-            </div>
-            <div className={styles.thirdLine}>
-              <div className={styles.text}>A STORY FORMS</div>
-            </div>
-            <div className={styles.fourthLine}>
+        </div>
+        <div className={styles.thirdLine}>
+          <div className={styles.text}>A STORY FORMS</div>
+        </div>
+        <div className={styles.fourthLine}>
               <BracketsLeft
                 className={styles.bracketsLeft}
                 color="#B6DA03"
                 width={32}
                 height={110}
               />
-              {/* <div className={styles.date}>4-9.02'26</div> */}
-              <img src={date} alt="4-9.02'26" className={styles.date} />
+          {/* <div className={styles.date}>4-9.02'26</div> */}
+          <img src={date} alt="4-9.02'26" className={styles.date} />
               <BracketsRight
                 className={styles.bracketsRight}
                 color="#B6DA03"
                 width={32}
                 height={110}
               />
+        </div>
+        <div className={styles.bottomContent}>
+          <div className={styles.addressContainer}>
+            <div className={styles.address}>
+              Seoul Jongno-gu Insadong 5-gil 14
             </div>
-            <div className={styles.bottomContent}>
-              <div className={styles.addressContainer}>
-                <div className={styles.address}>
-                  Seoul Jongno-gu Insadong 5-gil 14
-                </div>
-                <div className={styles.address}>
-                  Maru Art Center B1F Special Exhibition Hall
-                </div>
-              </div>
+            <div className={styles.address}>
+              Maru Art Center B1F Special Exhibition Hall
             </div>
           </div>
         </div>
+      </div>
+    </div>
       )}
     </>
   );

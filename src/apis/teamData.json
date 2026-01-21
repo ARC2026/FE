@@ -1,73 +1,61 @@
 [
   {
-    "id": "office",
-    "position": "OFFICE",
+    "id": "operations",
+    "position": "OPERATIONS",
     "color": "#ff3435",
     "hasBrackets": true,
     "members": [
       {
-        "name": "이름",
-        "img": null
+        "name": "박서영",
+        "imgKey": "operations_parkseoyoung",
+        "position": "LEAD"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "이지우",
+        "imgKey": "operations_leejiwoo",
+        "position": "SUB LEAD"
+      },
+      {
+        "name": "이나경",
+        "imgKey": "operations_leenak",
+        "position": "SUB LEAD"
+      },
+      {
+        "name": "임은지",
+        "imgKey": "operations_limeunji",
+        "position": "SUB LEAD"
+      }
+    ]
+  },
+  {
+    "id": "office",
+    "position": "OFFICE",
+    "color": "#42A9D9",
+    "hasBrackets": false,
+    "members": [
+      {
+        "name": "김가윤",
+        "imgKey": "office_kimgayoon"
+      },
+      {
+        "name": "전지민",
+        "imgKey": "office_jeonjimin"
       }
     ]
   },
   {
     "id": "planning",
     "position": "PLANNING",
-    "color": "#42A9D9",
-    "hasBrackets": false,
-    "members": [
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      }
-    ]
-  },
-  {
-    "id": "space",
-    "position": "SPACE",
     "color": "#B6DA03",
     "hasBrackets": true,
     "members": [
       {
-        "name": "이름",
-        "img": null
+        "name": "이시은",
+        "imgKey": "planning_leesieun"
       },
       {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
-      },
-      {
-        "name": "이름",
-        "img": null
+        "name": "홍찬빈",
+        "imgKey": "planning_hongchanbin"
       }
     ]
   },
@@ -78,40 +66,60 @@
     "hasBrackets": false,
     "members": [
       {
-        "name": "이름",
-        "img": null
+        "name": "김민정",
+        "imgKey": "design_kimminjung"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "염준희",
+        "imgKey": "design_yeomjunhee"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "홍서윤",
+        "imgKey": "design_hongseoyoon"
+      }
+    ]
+  },
+  {
+    "id": "space",
+    "position": "SPACE",
+    "color": "#42A9D9",
+    "hasBrackets": true,
+    "members": [
+      {
+        "name": "나지완",
+        "imgKey": "space_najiwan"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "이지연",
+        "imgKey": "space_leejiyeon"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "임정민",
+        "imgKey": "space_limjungmin"
       }
     ]
   },
   {
     "id": "web",
     "position": "WEB",
-    "color": "#038DCC",
+    "color": "#B6DA03",
     "hasBrackets": true,
     "members": [
       {
-        "name": "이름",
-        "img": null
+        "name": "박세웅",
+        "imgKey": "web_parksewoong"
       },
       {
-        "name": "이름",
-        "img": null
+        "name": "성아현",
+        "imgKey": "web_sungahyun"
+      },
+      {
+        "name": "오지샘",
+        "imgKey": "web_ohjisam"
+      },
+      {
+        "name": "윤예진",
+        "imgKey": "web_yoonyejin"
       }
     ]
   }

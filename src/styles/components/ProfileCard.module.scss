@@ -1,16 +1,20 @@
 @use "../_variables.scss" as *;
 
 .card {
+  width: fit-content;
   width: 125px;
   height: 176px;
   background-color: #ffffff;
-  padding: 7px 5px;
-  @include flex(column, center, space-between, 6px);
+  padding: vh(7px) vw(12px);
+  @include flex(column, center, space-between, (vh(6px)));
   .position {
-    font-size: 24px;
+    font-family: "Pretendard Variable", sans-serif;
+    letter-spacing: -0.04em;
+    font-size: rem(28px);
     height: 20px;
-    font-weight: 400;
+    font-weight: 600;
     color: #ff3435;
+    white-space: nowrap;
   }
   img {
     width: 92px;

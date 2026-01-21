@@ -1,4 +1,4 @@
-import styles from "../styles/components/AboutCard.module.scss";
+import styles from "../styles/components/ProfileCard.module.scss";
 import ParenthesisLeft from "./ParenthesisLeft";
 import ParenthesisRight from "./ParenthesisRight";
 export default function ProfileCard({ position, img, name, color }) {
