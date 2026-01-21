@@ -10,27 +10,12 @@
   background-attachment: fixed;
   padding: vh(65px) 0 vh(35px) vw(83px);
   overflow-x: hidden; // 수평 스크롤 숨김
-  .homeButton {
-    @include flex(row, center, flex-start, vw(7px));
-    cursor: pointer;
-    .homeButtonText {
-      font-size: rem(25px);
-      letter-spacing: -0.011em;
-      line-height: 1.5;
-      color: #ff3435;
-    }
-  }
-  .menuContainer {
-    position: absolute;
-    top: vh(57px);
-    right: vw(90px);
-  }
   .title {
     font-size: rem(135px);
     letter-spacing: -0.04em;
     color: #ff3435;
     line-height: 1.5;
-    margin-top: vh(-8px);
+    margin-top: vh(42px);
   }
   .contentContainer {
     position: relative;
@@ -42,7 +27,7 @@
       width: vw(708px);
       padding: vh(37px) vw(40px) vh(40px) vw(40px);
       .label {
-        @include flex(row, center, flex-start, vw(9px));
+        @include flex(row, center, flex-start, vw(14px));
         .labelHighlight {
           font-family: "Pretendard";
           font-weight: bold;
@@ -53,6 +38,27 @@
           background-color: $black;
           padding: vh(1px) vw(5px);
           width: fit-content;
+        }
+        .labelTextContainer {
+          @include flex(row, center, flex-start, vw(3px));
+          .labelTitle {
+            font-size: rem(17px);
+            letter-spacing: -0.04em;
+            color: $black;
+            line-height: 1.5;
+            font-family: "Pretendard";
+            font-weight: 600;
+            text-decoration: none;
+          }
+          .labelText {
+            font-size: rem(17px);
+            letter-spacing: -0.04em;
+            color: $black;
+            line-height: 1.5;
+            font-family: "Pretendard";
+            font-weight: regular;
+            text-decoration: none;
+          }
         }
         .labelText {
           font-size: rem(17px);
@@ -191,9 +197,41 @@
     }
     .footerContent {
       @include flex(row, center, flex-start, vw(13px));
-      overflow: visible;
+      overflow-x: auto;
       white-space: nowrap;
+      scrollbar-width: none; // Firefox
+      -ms-overflow-style: none; // IE, Edge
+      margin-right: vw(83px);
+
+      &::-webkit-scrollbar {
+        display: none; // Chrome, Safari, Opera
+      }
+
       .footerWrapper {
+        position: relative;
+
+        .office,
+        .planning,
+        .space,
+        .design,
+        .web {
+          @include flex(row, center, center);
+          gap: vw(10px);
+        }
+
+        .profileWrapper {
+          position: relative;
+          display: inline-block;
+
+          .profile {
+            width: vw(64px);
+            height: vw(64px);
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+          }
+        }
+
         .footerText {
           font-size: rem(19px);
           letter-spacing: -0.04em;
@@ -205,23 +243,3 @@
   }
 }
 
-.profileWrapper {
-  position: relative;
-  display: inline-block;
-}
-
-img.profile {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.cardContainer {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 10px;
-  z-index: 1000;
-}

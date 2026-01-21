@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Map from "./pages/Map";
 import ScrollToTop from "./hooks/ScrollToTop";
 import Temp from "./pages/Temp";
 import ProjectDetail from "./pages/ProjectDetail";
+import Home from "./pages/Home";
 
 function App() {
   return (

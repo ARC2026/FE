@@ -1,27 +1,18 @@
 import { useState } from "react";
-import { home } from "../assets";
-import SmallMenu from "../components/SmallMenu";
 import styles from "../styles/pages/About.module.scss";
 import BracketsLeft from "../components/BracketsLeft";
 import BracketsRight from "../components/BracketsRight";
 import Star from "../components/Star";
 import { parenthesisLeft, parenthesisRight } from "../assets";
-import { useNavigate } from "react-router-dom";
 import teamData from "../apis/teamData.json";
 import TeamSection from "../components/TeamSection";
+import Menu from "../components/Menu";
 
 export default function About() {
-  const navigate = useNavigate();
   const [hoveredProfile, setHoveredProfile] = useState(null);
   return (
     <div className={styles.container}>
-      <div className={styles.homeButton} onClick={() => navigate("/")}>
-        <img src={home} alt="home" />
-        <div className={styles.homeButtonText}>HOME</div>
-      </div>
-      <div className={styles.menuContainer}>
-        <SmallMenu />
-      </div>
+      <Menu />
       <div className={styles.title}>ABOUT</div>
       <div className={styles.contentContainer}>
         <div className={styles.content}>
@@ -59,11 +50,15 @@ export default function About() {
           <div className={styles.overviewTextContainer}>
             <img src={parenthesisLeft} alt="(" style={{ zIndex: 0 }} />
             <div className={styles.overviewText}>
-              조각과 조각이 이어지는 순간, 비로소 전체가 완성된다.
+              사이(思異)
               <br />
-              개개인의 작품은 사이'를 통해 연결되며, 전시는 그 네트워크 자체.
+              ‘존재’는 언제나 확정된 하나의 지점이 아닌,
               <br />
-              협업, 연대, 공감의 가능성을 포착할 수 있다
+              과거와 미래, 타인과 나 사이의 여백에서 더 뚜렷해집니다.
+              <br />
+              2026의 ARC는 그 찰나의 간극에서 피어나는 각자의 감각과 사유를 예술로 풀어내며,
+              <br />
+              관람객과 함께 그 사이 를 사유 하는 시간을 제안합니다.
             </div>
             <img src={parenthesisRight} alt=")" style={{ zIndex: 0 }} />
           </div>
@@ -81,7 +76,7 @@ export default function About() {
             </div>
           </div>
           <div className={styles.addressKorean}>
-            서울특별시 종로구 인사동 5길 14 마루아트센터 지하1층
+            {`서울특별시 종로구 인사동 5길 14 마루아트센터 지하1층, <<특별관>>`}
           </div>
           <div className={styles.dateContainer}>
             <div className={styles.date}>
@@ -101,6 +96,30 @@ export default function About() {
             >
               @arc__project
             </a>
+            <div className={styles.labelText}>|</div>
+            <div className={styles.labelTextContainer}>
+              <div className={styles.labelTitle}>Photo</div>
+              <a
+                className={styles.labelText}
+                href="https://www.instagram.com/kwonnninseo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @kwonnninseo
+              </a>
+              </div>
+            <div className={styles.labelText}>|</div>
+            <div className={styles.labelTextContainer}>
+              <div className={styles.labelTitle}>Music</div>
+              <a
+                className={styles.labelText}
+                href="https://www.instagram.com/sdrain_official"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @sdrain_official
+              </a>
+            </div>
           </div>
         </div>
       </div>
