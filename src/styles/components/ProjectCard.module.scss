@@ -33,6 +33,11 @@
       line-height: 150%;
       color: #1c1f1c;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      max-width: 271px; // 이미지 컨테이너 너비와 동일
     }
 
     .team {

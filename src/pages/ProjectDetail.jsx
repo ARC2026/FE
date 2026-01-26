@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { home } from "../assets";
-import SmallMenu from "../components/SmallMenu";
+import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import ProjectDetailSection from "../components/ProjectDetailSection";
 import styles from "../styles/pages/ProjectDetail.module.scss";
@@ -25,13 +24,7 @@ export default function ProjectDetail() {
   return (
     <div className={styles.container}>
       <div className={styles.paddingContainer}>
-      <div className={styles.homeButton} onClick={() => navigate("/")}>
-        <img src={home} alt="home" />
-        <div className={styles.homeButtonText}>HOME</div>
-      </div>
-      <div className={styles.menuContainer}>
-        <SmallMenu />
-      </div>
+      <Menu />
       <div className={styles.contentWrapper}>
         {/* 위쪽: 뒤로가기 버튼 */}
         <div className={styles.backButtonContainer}>
@@ -54,6 +47,7 @@ export default function ProjectDetail() {
           <div className={styles.contentContainer}>
             <ProjectDetailSection
               title={project.title}
+              team={project.team}
               artist={Array.isArray(project.artist) ? project.artist : [project.artist]}
               overview={project.overview}
               contact={project.insta && project.insta.length > 0 ? project.insta : []}

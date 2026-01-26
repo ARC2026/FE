@@ -10,15 +10,25 @@ import mockData from "../apis/mock.json";
 export default function Project() {
   const [activeFilter, setActiveFilter] = useState("ALL");
 
+  // 표시명과 실제 타입명 매핑
+  const filterTypeMap = {
+    "ALL": "ALL",
+    "ART&CRAFTS": "ART & CRAFTS",
+    "BRANDING": "BRANDING",
+    "EDITORIAL": "EDITORIAL",
+    "FASHION": "FASHION",
+    "FILM&MEDIA": "FILM & MEDIA",
+    "GRAPHIC": "GRAPHIC",
+  };
+
   const filters = [
     "ALL",
+    "ART&CRAFTS",
     "BRANDING",
+    "EDITORIAL",
+    "FASHION",
+    "FILM&MEDIA",
     "GRAPHIC",
-    "PRODUCT",
-    "SPACE",
-    "UX/UI",
-    "VIDEO",
-    "3D",
   ];
 
   // 필터링된 프로젝트 데이터
@@ -26,8 +36,9 @@ export default function Project() {
     if (activeFilter === "ALL") {
       return mockData.projects;
     }
+    const actualType = filterTypeMap[activeFilter];
     return mockData.projects.filter(
-      (project) => project.type === activeFilter
+      (project) => project.type === actualType
     );
   }, [activeFilter]);
 
@@ -53,10 +64,12 @@ export default function Project() {
           <BlueBracketsLeft color="#229BD2" width={68} height={648} />
           <BlueBracketsRight color="#229BD2" width={68} height={647} />
           <div className={styles.projectContainer}>
-            <ProjectContainer projects={filteredProjects.slice(0, 6)} />
-            {filteredProjects.length > 6 && (
-              <ProjectContainer projects={filteredProjects.slice(6, 12)} />
-            )}
+            {Array.from({ length: Math.ceil(filteredProjects.length / 6) }, (_, i) => (
+              <ProjectContainer 
+                key={i} 
+                projects={filteredProjects.slice(i * 6, (i + 1) * 6)} 
+              />
+            ))}
           </div>
         </div>
         <Footer />
