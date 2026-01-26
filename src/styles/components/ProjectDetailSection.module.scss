@@ -13,15 +13,20 @@
     align-items: center;
 
     .titleLabel {
-      font-family: "BusanFont_Provisional", "Busan", sans-serif;
-      font-weight: 400;
+      font-family: "Pretendard", "Pretendard Variable", sans-serif;
+      font-size: 25px;
       font-style: normal;
-      font-size: 53px;
-      line-height: 150%;
-      letter-spacing: -4%;
-      text-align: center;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -1px;
       text-transform: uppercase;
-      color: #1c1f1c;
+      color: var(--black, #1c1f1c);
+      white-space: pre-line; // \n 개행 인식
+
+      &.titleLabelSmall {
+        // 긴 제목일 때 스타일 (필요시 조정)
+        font-size: 20px;
+      }
     }
 
     .asterisk {
@@ -45,11 +50,24 @@
     margin-bottom: vh(10px);
   }
 
+  .teamName {
+    font-family: "Pretendard", "Pretendard Variable", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.8px;
+    color: #1c1f1c;
+  }
+
   .artistName {
     @include flex(row, flex-start, flex-start, 15px);
     font-family: "Pretendard", "Pretendard Variable", sans-serif;
     font-size: 20px;
-    letter-spacing: -0.04em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.8px;
     color: #1c1f1c;
     margin-bottom: 53px;
   }
@@ -123,4 +141,3 @@
     }
   }
 }
-

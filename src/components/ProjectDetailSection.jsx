@@ -3,16 +3,20 @@ import BracketsRight from "./BracketsRight";
 import Star from "./Star";
 import styles from "../styles/components/ProjectDetailSection.module.scss";
 
-export default function ProjectDetailSection({ title, artist, overview, contact }) {
+export default function ProjectDetailSection({ title, team, artist, overview, contact }) {
+  // 제목이 15자 이상이면 긴 제목으로 처리
+  const isLongTitle = title && title.length > 15;
+
   return (
     <div className={styles.content}>
       {/* TITLE 섹션 */}
       <div className={styles.titleSection}>
-        <BracketsLeft color="#ff3435" width={12} height={40} />
-        <span className={styles.titleLabel}>{title}</span>
-        <BracketsRight color="#ff3435" width={12} height={40} />
+        <BracketsLeft color="#ff3435" width={8} height={25} />
+        <span className={`${styles.titleLabel} ${isLongTitle ? styles.titleLabelSmall : ''}`}>{title}</span>
+        <BracketsRight color="#ff3435" width={8} height={25} />
         <Star className={styles.asterisk} color="#229bd2" />
       </div>
+      {team && <div className={styles.teamName}>{team}</div>}
       <div className={styles.artistName}>
         {Array.isArray(artist) ? (
           artist.map((name, index) => (
