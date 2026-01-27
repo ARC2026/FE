@@ -3,10 +3,10 @@
 .card {
   width: fit-content;
   width: 125px;
-  height: 176px;
+  height: fit-content;
   background-color: #ffffff;
   padding: vh(7px) vw(12px);
-  @include flex(column, center, space-between, (vh(6px)));
+  @include flex(column, center, space-between, (vh(30px)));
   .position {
     font-family: "Pretendard Variable", sans-serif;
     letter-spacing: -0.04em;
