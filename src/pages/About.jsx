@@ -76,7 +76,7 @@ export default function About() {
             </div>
           </div>
           <div className={styles.addressKorean}>
-            {`서울특별시 종로구 인사동 5길 14 마루아트센터 지하1층, <<특별관>>`}
+            {`서울특별시 종로구 인사동 5길 14 마루아트센터 특별관 B1`}
           </div>
           <div className={styles.dateContainer}>
             <div className={styles.date}>
