@@ -7,6 +7,8 @@ import { parenthesisLeft, parenthesisRight } from "../assets";
 import teamData from "../apis/teamData.json";
 import TeamSection from "../components/TeamSection";
 import Menu from "../components/Menu";
+import Footer from "../components/Footer";
+
 
 export default function About() {
   const [hoveredProfile, setHoveredProfile] = useState(null);
@@ -137,6 +139,7 @@ export default function About() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

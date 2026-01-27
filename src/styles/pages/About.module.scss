@@ -24,7 +24,7 @@
       margin-top: vh(-70px);
       background-color: #fafafa;
       position: relative;
-      width: vw(708px);
+      // width: vw(708px);
       padding: vh(37px) vw(40px) vh(40px) vw(40px);
       .label {
         @include flex(row, center, flex-start, vw(14px));
