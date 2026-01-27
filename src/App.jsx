@@ -6,12 +6,14 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import Temp from "./pages/Temp";
 import ProjectDetail from "./pages/ProjectDetail";
 import Home from "./pages/Home";
+import MobileWarning from "./components/MobileWarning";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <ScrollToTop />
+        <MobileWarning />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

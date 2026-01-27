@@ -1,0 +1,179 @@
+@use "../_variables.scss" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  @include flex(row, center, center);
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0 15px;
+  .container {
+    .content {
+      width: 100%;
+      @include flex(column, start, center);
+    
+      .firstLine {
+        @include flex(row, center, center);
+        width: 100%;
+        justify-content: flex-start;
+        .bracketsLeft {
+          margin-right: vw(384px);
+        }
+        .bracketsRight {
+          margin-right: vw(12px);
+        }
+        .text {
+          font-size: rem(44px);
+          letter-spacing: -0.04em;
+        }
+      }
+      .secondLine {
+        @include flex(row, center, center, vw(8px));
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: -15px;
+        .fragments {
+          width: 275px;
+          height: 45px;
+        }
+        .starContainer {
+          font-size: rem(60px);
+          color: #229bd2;
+          line-height: 1.26;
+          letter-spacing: 0.11em;
+        }
+      }
+      .thirdLine {
+        @include flex(row, center, center);
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        margin-top: -15px;
+        .text {
+          font-size: rem(44px);
+          letter-spacing: -0.04em;
+        }
+      }
+      .label {
+        @include flex(row, center, flex-start, vw(14px));
+        margin-top: 16px;
+        .labelHighlight {
+          font-family: "Pretendard";
+          font-size: rem(15px);
+          letter-spacing: -0.04em;
+          color: #F6F6F6;
+          line-height: 1.5;
+          background-color: #1C1F1C;
+          padding: vh(1px) vw(5px);
+          width: fit-content;
+        }
+        .labelTextContainer {
+          @include flex(row, center, flex-start, vw(3px));
+          .labelTitle {
+            font-size: rem(15px);
+            letter-spacing: -0.04em;
+            color: #1C1F1C;
+            line-height: 1.5;
+            font-family: "Pretendard";
+            text-decoration: none;
+          }
+          .labelText {
+            font-size: rem(15px);
+            letter-spacing: -0.04em;
+            color: #1C1F1C;
+            line-height: 1.5;
+            font-family: "Pretendard";
+            text-decoration: none;
+          }
+        }
+        .labelText {
+          font-size: rem(15px);
+          letter-spacing: -0.04em;
+          color: #1C1F1C;
+          line-height: 1.5;
+          font-family: "Pretendard";
+          text-decoration: none;
+        }
+      }
+      .addressEnglish {
+        @include flex(column, flex-start, center, 4px);
+        margin-top: vh(12px);
+        .addressText {
+          font-family: "Questrial";
+          font-size: rem(15px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          color: #1c1f1c;
+
+          &:last-child {
+            margin-top: vh(-12px);
+          }
+        }
+      }
+      .addressKorean {
+        font-size: rem(15px);
+        letter-spacing: -0.04em;
+        line-height: 1.5;
+        color: $black;
+        font-family: "Pretendard";
+        font-weight: regular;
+        margin-top: vh(-2px);
+      }
+      .fourthLine {
+        @include flex(row, center, flex-end);
+        width: 100%;
+        margin-top: 16px;
+        .date {
+          font-size: rem(20px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          font-family: "Questrial";
+        }
+      }
+      .warningContainer {
+        @include flex(column, center, center);
+        width: 100%;
+        margin-top: 40px;
+        font-family: "Pretendard";
+        border: 1px solid #1C1F1C;
+        border-radius: 10px;
+        padding: 28px 43px;
+
+        .warningTitle {
+          font-size: rem(13px);
+          margin-top: 16px;
+          letter-spacing: -0.04em;
+          margin-bottom: 8px;
+        }
+        .warningText {
+          font-size: rem(15px);
+          letter-spacing: -0.04em;
+          line-height: 1.5;
+          font-weight: 500;
+          text-align: center;
+          font-family: "Questrial";
+        }
+      }
+      .arcLogoContainer {
+        @include flex(row, center, center);
+        width: 100%;
+        margin-top: 96px;
+        .arcLogo {
+          width: 59px;
+          height: 25px;
+        }
+      }
+    }
+    
+  }
+}
+
+
+

@@ -10,6 +10,8 @@ import projectSample from "./project_sample.png";
 import fragments from "./fragments.svg";
 import rixfont from "./rixfont.svg";
 import photomate from "./photomate.svg";
+import arc from "./arc.svg";
+import x from "./x.svg";
 
 // Profile images
 import profile_operations_parkseoyoung from "./profiles/1. Operationteam_운영위원장_박서영.png";
@@ -44,6 +46,8 @@ export {
   fragments,
   rixfont,
   photomate,
+  arc,
+  x,
   // Profile images
   profile_operations_parkseoyoung,
   profile_operations_leejiwoo,
