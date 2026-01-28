@@ -41,9 +41,7 @@ export default function MapProjectList({ currentPage = 0, activeTab = "ALL" }) {
       </div>
       <div className={styles.projectTeam}>
         {Array.isArray(project.artist)
-          ? project.artist.map((name, index) => (
-            <span key={index}>{name}</span>
-          ))
+          ? project.artist.join(' ')
           : project.team}
       </div>
     </div>
