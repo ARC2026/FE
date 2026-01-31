@@ -45,18 +45,29 @@ export default function ProjectDetailSection({ title, team, artist, overview, co
       </div>
       <div className={styles.contactText}>
         {Array.isArray(contact) ? (
-          contact.map((item, index) => {
-            const username = item.replace("@", "");
-            return (
-              <span 
-                key={index} 
-                onClick={() => window.open(`https://www.instagram.com/${username}`, "_blank")}
-                className={styles.contactLink}
-              >
-                {item}
-              </span>
-            );
-          })
+          (() => {
+            const CHUNK_SIZE = 5;
+            const chunks = [];
+            for (let i = 0; i < contact.length; i += CHUNK_SIZE) {
+              chunks.push(contact.slice(i, i + CHUNK_SIZE));
+            }
+            return chunks.map((row, rowIndex) => (
+              <div key={rowIndex} className={styles.contactRow}>
+                {row.map((item, index) => {
+                  const username = item.replace("@", "");
+                  return (
+                    <span
+                      key={index}
+                      onClick={() => window.open(`https://www.instagram.com/${username}`, "_blank")}
+                      className={styles.contactLink}
+                    >
+                      {item}
+                    </span>
+                  );
+                })}
+              </div>
+            ));
+          })()
         ) : (
           <span 
             onClick={() => {

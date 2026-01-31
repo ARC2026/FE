@@ -125,11 +125,16 @@
   }
 
   .contactText {
-    @include flex(row, flex-start, flex-start, 24px);
+    @include flex(column, flex-start, flex-start, 12px);
     font-family: "Pretendard", "Pretendard Variable", sans-serif;
     font-size: 18px;
     letter-spacing: -0.04em;
     color: #1c1f1c;
+
+    .contactRow {
+      @include flex(row, flex-start, flex-start, 24px);
+      flex-wrap: wrap;
+    }
 
     .contactLink {
       cursor: pointer;
